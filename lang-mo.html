@@ -182,7 +182,7 @@ body.v3d-lock{overflow:hidden}
 .v3d-tip td:first-child{color:#5b6168;padding-right:10px;white-space:nowrap}
 .v3d-tip small{display:block;margin-top:5px;color:#6b7178;font-size:11px}
 .v3d-hint{position:absolute;left:10px;bottom:10px;z-index:2;pointer-events:none;background:rgba(27,28,30,.78);color:#fff;font-size:12px;padding:5px 9px;border-radius:6px}
-#s-gopy{max-width:1280px;margin:0 auto}
+#s-gopy,#s-chuanbi{max-width:1280px;margin:0 auto}
 .gy-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:0 0 12px}
 .gy-stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
 .gy-stat b{display:block;font-size:24px;line-height:1.2} .gy-stat span{color:var(--muted);font-size:12.5px}
@@ -351,6 +351,7 @@ svg.dwg .ranh{stroke:#111;stroke-width:.35;fill:none;stroke-dasharray:2.6 1.1}
   <pattern id="p-grass" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#e4efd8"/><path d="M.8 3l.35-1 .35 1M2.6 1.6l.35-1 .35 1" fill="none" stroke="#86ad68" stroke-width=".18"/></pattern>
   <pattern id="p-grass2" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="2" height="2" fill="#86b466"/><path d="M.4 1.5l.25-.7.25.7M1.3.8l.25-.7.25.7" fill="none" stroke="#4f7d3a" stroke-width=".14"/></pattern>
   <pattern id="p-pave" width="13.33" height="13.33" patternUnits="userSpaceOnUse"><rect width="13.33" height="13.33" fill="#d8cfc4"/><rect x="0.12" y="3.45" width="3.09" height="6.43" fill="#c98b6b"/><rect x="0.12" y="0.12" width="6.43" height="3.09" fill="#b8735a"/><rect x="6.79" y="-3.21" width="3.09" height="6.43" fill="#d49a7a"/><rect x="-3.21" y="10.12" width="6.43" height="3.09" fill="#a96d58"/><rect x="3.45" y="6.79" width="3.09" height="6.43" fill="#c4a089"/><rect x="3.45" y="3.45" width="6.43" height="3.09" fill="#bf7f62"/><rect x="10.12" y="0.12" width="3.09" height="6.43" fill="#c98b6b"/><rect x="6.79" y="10.12" width="3.09" height="6.43" fill="#b8735a"/><rect x="6.79" y="6.79" width="6.43" height="3.09" fill="#d49a7a"/><rect x="10.12" y="10.12" width="6.43" height="3.09" fill="#a96d58"/></pattern>
+  <pattern id="p-dax" width="20" height="10" patternUnits="userSpaceOnUse"><rect width="20" height="10" fill="#bdb9b0"/><rect x=".15" y=".15" width="9.7" height="4.7" fill="#2c3135"/><rect x="10.15" y=".15" width="9.7" height="4.7" fill="#353a3f"/><rect x="-4.85" y="5.15" width="9.7" height="4.7" fill="#30353a"/><rect x="5.15" y="5.15" width="9.7" height="4.7" fill="#272c30"/><rect x="15.15" y="5.15" width="9.7" height="4.7" fill="#30353a"/><g stroke="#8d949a" stroke-width=".1" fill="none" opacity=".7"><path d="M1.5 1.2 L5.8 3.9"/><path d="M12 3.6 L17.5 1.1"/><path d="M6.4 6.3 L11.2 9.1"/><path d="M16.8 8.6 L19.6 6.2"/></g></pattern>
   <pattern id="p-peb" width="2.6" height="2.6" patternUnits="userSpaceOnUse"><rect width="2.6" height="2.6" fill="#f7f7f4"/><g fill="#fff" stroke="#9c9c97" stroke-width=".12"><ellipse cx=".7" cy=".7" rx=".5" ry=".38"/><ellipse cx="1.95" cy="1.25" rx=".45" ry=".4"/><ellipse cx=".9" cy="2.0" rx=".42" ry=".34"/></g></pattern>
   <pattern id="p-grit" width="3" height="3" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#ececea"/><circle cx=".7" cy=".8" r=".22" fill="#b7b7b2"/><circle cx="2.1" cy="1.9" r=".18" fill="#c4c4bf"/><circle cx="1.6" cy=".4" r=".12" fill="#a9a9a4"/><circle cx=".5" cy="2.4" r=".14" fill="#bdbdb8"/></pattern>
   <pattern id="p-conc" width="5" height="5" patternUnits="userSpaceOnUse"><rect width="5" height="5" fill="#e6e6e2"/><g fill="#9a9a95"><circle cx="1" cy="1.2" r=".18"/><circle cx="3.6" cy="2.1" r=".14"/><circle cx="2.2" cy="4" r=".16"/><circle cx="4.4" cy="4.4" r=".12"/></g><path d="M2.6.6l.5.8h-1z" fill="none" stroke="#9a9a95" stroke-width=".12"/></pattern>
@@ -404,7 +405,8 @@ svg.dwg .ranh{stroke:#111;stroke-width:.35;fill:none;stroke-dasharray:2.6 1.1}
       <button class="tab" role="tab" data-t="mong" aria-selected="false">Chi tiết móng</button>
       <button class="tab" role="tab" data-t="info" aria-selected="false">Thông số &amp; dự toán</button>
       <button class="tab" role="tab" data-t="tiendo" aria-selected="false">Tiến độ thi công</button>
-      <button class="tab" role="tab" data-t="gopy" aria-selected="false">Góp ý cậu Khải</button>
+      <button class="tab" role="tab" data-t="gopy" aria-selected="false">Góp ý</button>
+      <button class="tab" role="tab" data-t="chuanbi" aria-selected="false">Công tác chuẩn bị</button>
       <button class="tab" role="tab" data-t="3d" aria-selected="false">Mô hình 3D</button>
       <button class="tab" role="tab" data-t="ngam3d" aria-selected="false">3D phần ngầm</button>
       <button class="tab" role="tab" data-t="anh" aria-selected="false">Ảnh tư liệu</button>
@@ -420,6 +422,7 @@ svg.dwg .ranh{stroke:#111;stroke-width:.35;fill:none;stroke-dasharray:2.6 1.1}
     <section class="page info" id="pg-info"><div id="s-info"></div></section>
     <section class="page info" id="pg-tiendo"><div id="s-tiendo"></div></section>
     <section class="page info" id="pg-gopy"><div id="s-gopy"></div></section>
+    <section class="page info" id="pg-chuanbi"><div id="s-chuanbi"></div></section>
     <section class="page info anh-page" id="pg-anh"><div id="s-anh"></div></section>
     <section class="page v3d-page" id="pg-3d">
       <div class="v3d-bar">
@@ -507,16 +510,16 @@ const DEFAULTS = {
   lu:    { type:'hoa', aL:0.89, aD:0.47, aH:0.75, W:0.70, D:0.46, hk:0.60, hc:0.40, pad:0.09, back:0,
  d:0.40, h:0.75, gap:0.58, hpad:0.08 },   // 23/11/2026: lư hóa mã cao 0,75. type: an = bàn hương án, mai = lư hương mái che, hoa = lư hóa mã, no = không đặt
   bamboo:{ type:'vt', gap:0.10, w:0.35, spacing:0.40, h:0.95, barrier:0.60 },   // vt = không trồng trúc, mộ lùi sát tường hậu, 2 cây vạn tuế
-  frame: { rise:0.20, w:0.11, up:0.06, pebBack:0.15, pebSide:0.20, pebFront:0.16, gap:0.60 },
+  frame: { mat:'den', rise:0.20, w:0.11, up:0, pebBack:0.15, pebSide:0.20, pebFront:0.10, gap:0.60 },   // 25/11/2026: sỏi trước mộ 16 → 10 cm để chỗ đứng sau lư hóa mã rộng hơn
 
-  grave: { W:0.89, L:1.47, H0:0.20, bW:0.75, bL:1.13, bH:0.16, lW:0.61, lL:0.95, lH:0.11,   // 22/11/2026: gia đình chỉnh theo cung tốt thước Lỗ Ban (mẫu xưởng cũ 89 × 127 × 97)
-           sW:0.75, sT:0.10, sH:0.76, sBack:0.08, sR:0.31, gL:0.67, gW:0.31, rE:0.02, mat:'daxanh' },   // mat: granite = granite đen đánh bóng, daxanh = đá xanh vân mây mài mờ
+  grave: { W:0.97, L:1.54, H0:0.20, bW:0.81, bL:1.16, bH:0.16, lW:0.66, lL:0.98, lH:0.11,   // 25/11/2026: gia đình chỉnh theo tiêu chuẩn mới, đều cung tốt thước Lỗ Ban (22/11: 89 × 147)
+           sW:0.81, sT:0.10, sH:0.77, sBack:0.08, sR:0.31, gL:0.67, gW:0.36, rE:0.02, mat:'daxanh' },   // mat: granite = granite đen đánh bóng, daxanh = đá xanh vân mây mài mờ
 
   vault: { inL:1.15, inW:0.69, depth:1.54, wt:0.20, slab:0.11, bL:0.30, bW:0.20, lot:0.10, tL:0.89, tW:0.47, tH:0.55, qiL:0.68, qiW:0.31, qiH:0.31,   // 22/11/2026: gia đình chỉnh lòng huyệt
            rL:0.95, rW:0.58, rD:0.16, aL:0.50, aW:0.23, aD:0.16 },
   bia:   { photo:'no' },
   layout:{ order:'AB', shift:0 },
-  _v:17
+  _v:18
 };
 const WHO = {
   anh:['TRỊNH MINH TÙNG','cải táng đưa về','Mộ Trịnh Minh Tùng'],
@@ -594,9 +597,10 @@ const FIELDS = [
   {g:'Bố trí mộ', items:[
     ['layout.order','Thứ tự tính từ đầu AB','select',null,[['AB','Mộ Trịnh Minh Tùng sát cạnh AB'],['CD','Mộ Trịnh Minh Tùng sát cạnh CD']]],
     ['layout.shift','Dịch cụm mộ về phía CD','m',0.05],
-    ['frame.rise','Bục mộ nâng cao hơn mặt sân (khung viền, sỏi, 3 mộ)','m',0.05],
+    ['frame.rise','Bục mộ nâng cao hơn mặt sân (khung viền, nền, 3 mộ)','m',0.05],
     ['frame.gap','Khoảng cách giữa 2 mộ','m',0.05],
-    ['frame.pebFront','Dải sỏi trước mộ','m',0.05],
+    ['frame.mat','Nền quanh mộ','select',null,[['den','Đá xanh đen mài lát, khung viền ốp đá, mặt phẳng'],['soi','Sỏi trắng, khung viền gạch trần nổi 60']]],
+    ['frame.pebFront','Dải nền (đá lát / sỏi) trước mộ','m',0.05],
     ['lv.lawn','Mặt sân cao hơn lối đi','m',0.05]]},
   {g:'Tường hậu & cây phía sau mộ', items:[
     ['bamboo.type','Phía sau mộ','select',null,[['truc','Hàng trúc trong bồn trước tường hậu'],['vt','Không trồng trúc: mộ lùi sát tường hậu, 2 chậu vạn tuế hai bên']]],
@@ -666,6 +670,7 @@ function loadP(){ try{ const s = localStorage.getItem(LS_KEY);
     if(!o._v || o._v<15){ p.lu=clone(DEFAULTS.lu); }   // lư hóa mã → lư hương mái che đá xanh, lùi sát khung viền mộ
     if(!o._v || o._v<16){ p.lu.type = o.lu && o.lu.on==='no' ? 'no' : 'mai'; }   // giữ cả 2 kiểu lư để chọn (ô "Kiểu lư")
     if(!o._v || o._v<17){ if(p.lu.type==='mai') p.lu.type='an'; }   // thêm bàn hương án, đặt làm kiểu mặc định thay lư mái che
+    if(!o._v || o._v<18){ p.frame.up=0; }   // 25/11/2026: bục mộ phẳng, khung viền bằng mặt đá lát, bỏ gờ
     p._v=DEFAULTS._v; return p; } }catch(e){} return clone(DEFAULTS); }
 function saveP(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(P)); }catch(e){} }
 let P = loadP();
@@ -852,24 +857,25 @@ function layout(site,R){
   const vt=P.vault;
   { const S=slabWL(), O=openWL();
 
-    if(S.W<g.W-0.001 || S.L<g.L-0.001) warn.push(`Đế đỡ mộ ${fcm(S.W)}×${fcm(S.L)} cm nhỏ hơn đế mộ đá ${fcm(g.W)}×${fcm(g.L)} cm: mép đế mộ bị hẫng.`);
-    if(O.W>g.W-0.12 || O.L>g.L-0.12) warn.push(`Miệng huyệt ${fcm(O.W)}×${fcm(O.L)} cm quá rộng: đế mộ đá chỉ tì lên đế đỡ dưới 6 cm mỗi phía.`);
+    const dV=vOff(), seat=Math.min((g.W-O.W)/2, g.L/2+dV-O.L/2, g.L/2-dV-O.L/2);
+    if(S.W<g.W-0.001) warn.push(`Đế đỡ mộ rộng ${fcm(S.W)} cm, nhỏ hơn đế mộ đá ${fcm(g.W)} cm: mép đế mộ bị hẫng.`);
+    if(seat<0.06) warn.push(`Miệng huyệt ${fcm(O.W)}×${fcm(O.L)} cm quá rộng: đế mộ đá chỉ tì lên đế đỡ dưới 6 cm mỗi phía.`);
     if(O.W<vt.tW+0.06-1e-6 || O.L<vt.tL+0.06-1e-6) warn.push(`Miệng huyệt ${fcm(O.W)}×${fcm(O.L)} cm chật cho quách ${fcm(vt.tW)}×${fcm(vt.tL)} cm (cần dư ít nhất 3 cm mỗi phía để hạ quách).`);
     if(S.W>g.W+f.gap-0.05) warn.push(`Huyệt rộng ngoài ${fcm(S.W)} cm, hai huyệt cạnh nhau cách dưới 5 cm.`);
-    if(S.L/2>g.L/2+f.pebBack+0.001) warn.push(`Đế đỡ mộ dài ${fcm(S.L)} cm chạm khung viền phía sau.`); }
+    if(dV+S.B>g.L/2+f.pebBack+0.001) warn.push(`Huyệt lùi về phía bia ${fcm(dV)} cm cho tim quách trùng tim ô cỏ, nên thành huyệt phía sau chạm khung viền. Hãy tăng dải đá lát sau mộ.`); }
   if(vt.tL+0.04>vt.rL || vt.tW+0.04>vt.rW) warn.push(`Hốc đặt quách ${fcm(vt.rW)}×${fcm(vt.rL)} cm chưa đủ cho quách ${fcm(vt.tW)}×${fcm(vt.tL)} cm (cần dư ít nhất 2 cm mỗi phía).`);
   if(vt.rL>vt.inL-0.06 || vt.rW>vt.inW-0.06) warn.push('Hốc đặt quách phải nhỏ hơn lòng huyệt, chừa gờ ít nhất 3 cm mỗi phía.');
   if(vt.tH-vt.rD+0.08>vt.depth) warn.push(`Nắp quách cao hơn đáy lòng huyệt ${fcm(vt.tH-vt.rD)} cm, lòng huyệt sâu ${fcm(vt.depth)} cm chưa đủ (cần hở ít nhất 8 cm tới đỉnh tường).`);
   if(vt.aL>=vt.rL-0.10 || vt.aW>=vt.rW-0.10) warn.push('Hốc thông âm phải nhỏ hơn đáy hốc đặt quách, chừa ít nhất 5 cm mỗi bên để quách kê lên.');
   if(vt.qiL>vt.tL-0.04 || vt.qiW>vt.tW-0.04 || vt.qiH>vt.tH-0.04) warn.push('Kích thước lọt lòng quách phải nhỏ hơn phủ bì.');
   if(false) warn.push(`Huyệt rộng ${fcm(vt.inW+2*vt.wt)} cm, hai huyệt cạnh nhau chỉ còn cách ${fcm(g.W+f.gap-vt.inW-2*vt.wt)} cm. Nên tăng khoảng cách giữa các mộ.`);
-  if(vt.inL+2*vt.wt>L_frameIn(f,g)) warn.push('Huyệt dài hơn phần trong khung viền, hãy kiểm tra dải sỏi trước và sau mộ.');
+  if(vt.inL+2*vt.wt>L_frameIn(f,g)) warn.push('Huyệt dài hơn phần trong khung viền, hãy kiểm tra dải đá lát trước và sau mộ.');
   if(latOn() && !latZ()) warn.push(`Tường lửng cao ${fm(P.encl.h)} m, không đủ chỗ đặt ô hoa văn ${fcm(P.encl.latS)} cm (cần thêm hàng gạch đỉnh và ít nhất 5 cm gạch chân).`);
   if(isNui()){ const A=wallPts(R.W);
     if(A.some((p,i)=>i && p[0]<=A[i-1][0]+0.05)) warn.push(`Bướu hai bên của tường hậu dài ${fm(P.wall.sw)} m, phải lớn hơn 0,10 m và nhỏ hơn nửa chiều dài tường (${fm(R.W/2)} m) để còn chỗ cho bướu giữa.`);
     if(A.some(p=>p[1]<0.3)) warn.push('Có điểm A1–A7 thấp hơn 0,30 m trên mặt sân, tường hậu gần như không còn.');
     if(wallStats(R.W).hmax>2.2) warn.push('Đỉnh tường hậu cao hơn 2,2 m, cần tính lại trụ và móng.'); }
-  return {ix0,ix1,iy0,ywb,ywf,ybb,yFB,yGB,yGF,yFF,groupLen,xc,gx1,gx2,graves,front,gates,gate,step,lu,warn};
+  return {ix0,ix1,iy0,ywb,ywf,ybb,yFB,yGB,yGF,yFF,hc:(yGF+yGB)/2+vOff(),groupLen,xc,gx1,gx2,graves,front,gates,gate,step,lu,warn};
 }
 const zG = () => P.lv.lawn + (P.frame.rise||0);
 /* đáy huyệt 3 cấp: (1) đáy lòng huyệt zb, (2) hốc đặt quách sâu rD, (3) hốc thông âm sâu aD dưới đáy hốc quách; cả 3 cấp nằm trong khối móng bê tông, dưới thông âm còn lớp móng dày lot; tường huyệt xây trên móng
@@ -880,8 +886,13 @@ function vaultBase2D(v,c,o,r,a,zb,lbl){ const vt=P.vault, zr=zb-vt.rD, za=zr-vt.
   if(r>0 && a>0){ v.rect(c-a,za,c+a,zr,'fill="#fff" stroke="#333" stroke-width=".2"'); if(lbl) v.text(c,za+vt.aD*0.45,'THÔNG ÂM','class="lbl-s b halo"','middle',0,0.7); }
   return {zr,za,zl}; }
 /* giằng đỉnh huyệt: vành BTCT trên thành huyệt, mép ngoài trùng đế mộ để úp mộ đá lên; không có nắp, lòng mộ thông xuống huyệt */
-const slabWL = () => { const vt=P.vault; return {W:vt.inW+2*vt.wt, L:vt.inL+2*vt.wt}; };   // mép ngoài đế đỡ = mép ngoài thành huyệt
-const openWL = () => { const vt=P.vault, s=slabWL(); return {W:s.W-2*vt.bW, L:s.L-2*vt.bL}; };   // miệng huyệt (lỗ trong đế đỡ)
+/* tim huyệt = tim quách = tim ô cỏ: ô cỏ nằm giữa nắp mộ, nắp lùi về phía bia nên tim huyệt lệch về phía bia vOff() so với tim đế mộ */
+const vOff = () => { const g=P.grave; return g.L/2-g.sBack-g.sT-g.lL/2; };
+/* đế đỡ mộ: hai bên trùng mép ngoài thành huyệt; theo chiều dài phủ cả thành huyệt lẫn đế mộ đá (không để mép đế mộ hẫng)
+   F: từ tim huyệt tới mép phía chân mộ, B: tới mép phía bia, c: tim đế đỡ lệch so với tim huyệt */
+const slabWL = () => { const vt=P.vault, g=P.grave, d=vOff(), oL=vt.inL/2+vt.wt, F=Math.max(oL,g.L/2+d), B=Math.max(oL,g.L/2-d); return {W:vt.inW+2*vt.wt, L:F+B, F, B, c:(B-F)/2}; };
+const openWL = () => { const vt=P.vault; return {W:vt.inW+2*vt.wt-2*vt.bW, L:vt.inL+2*vt.wt-2*vt.bL}; };   // miệng huyệt (lỗ trong đế đỡ), tim trùng tim huyệt
+const slabBand = () => { const S=slabWL(), O=openWL(); return {F:S.F-O.L/2, B:S.B-O.L/2}; };   // bản đế đỡ ở đầu phía chân / phía bia
 /* quách (nét đứt xanh): phủ bì len × cao tH, lọt lòng; đặt tại z0 (đáy hốc) */
 function quach2D(v,c,len,inLen,z0){ const vt=P.vault, wTh=(vt.tH-vt.qiH)/2, st='fill="none" stroke="#2a6fb0" stroke-dasharray="1.6 .8"';
   v.rect(c-len/2,z0,c+len/2,z0+vt.tH,st+' stroke-width=".3"'); v.rect(c-inLen/2,z0+wTh,c+inLen/2,z0+wTh+vt.qiH,st+' stroke-width=".2"');
@@ -890,7 +901,22 @@ function quach2D(v,c,len,inLen,z0){ const vt=P.vault, wTh=(vt.tH-vt.qiH)/2, st='
 const TT_D=0.10;
 function khay2D(v,c,u1,u2,z){ v.rect(u1-0.03,z-0.02,c-TT_D/2,z,'fill="url(#p-grancut)" class="k2"'); v.rect(c+TT_D/2,z-0.02,u2+0.03,z,'fill="url(#p-grancut)" class="k2"'); }
 const vaultZ = zb => ({ zr:zb-P.vault.rD, za:zb-P.vault.rD-P.vault.aD, zl:zb-P.vault.rD-P.vault.aD-P.vault.lot });
-const zGName = () => (P.frame.rise||0)>0.005 ? 'mặt bục mộ' : 'mặt sân';   // mặt bục mộ (khung viền, sỏi, đế mộ) nâng cao hơn mặt sân
+const zGName = () => (P.frame.rise||0)>0.005 ? 'mặt bục mộ' : 'mặt sân';   // mặt bục mộ (khung viền, đá lát, đế mộ) nâng cao hơn mặt sân
+const DAX='fill="#2f3337" stroke="#111" stroke-width=".12"';
+/* nền quanh mộ, 2 phương án (ô "Nền quanh mộ"): đá xanh đen mài lát, khung viền ốp đá, mặt phẳng (den); sỏi trắng, khung viền gạch trần nổi 60 (soi) */
+const isSoi = () => P.frame.mat==='soi';
+const frUp = () => isSoi() ? 0.06 : 0;   // khung viền nổi trên mặt nền
+const nenD = () => isSoi() ? 0.05 : 0.10;   // bề dày lớp nền trên đất đầm
+const nenFill = () => isSoi() ? 'url(#p-peb)' : 'url(#p-dax)';   // mặt bằng
+const frFill = () => isSoi() ? 'url(#p-brick)' : '#2a2e32';   // mặt bằng khung viền
+const faceFill = () => isSoi() ? 'url(#p-wall)' : 'url(#p-dax)';   // mặt đứng thành bục
+const nenName = () => isSoi() ? 'Sỏi trắng quanh mộ' : 'Đá xanh đen mài lát quanh mộ';
+const nenTxt = () => isSoi() ? 'Sỏi trắng dày 50 trên vải địa kỹ thuật.' : 'Lát đá xanh đen mài 300×150 dày 30, xếp so le, mạch vữa sáng màu 5; vữa lót 20, bê tông lót 50 trên đất đầm.';
+const frTxt = f => isSoi() ? `khung viền xây gạch trần dày ${fmm(f.w)} kiêm thành bục, nổi ${fmm(frUp())} trên mặt sỏi` : `khung viền xây gạch dày ${fmm(f.w)} kiêm thành bục, ốp đá xanh đen mài mặt trên dày 30 và mặt ngoài dày 20, mặt trên phẳng bằng mặt đá lát, không gờ`;
+/* lớp nền (mặt cắt) */
+function daxLay(v,a,b,zg){ if(b<=a+1e-6) return; if(isSoi()){ v.rect(a,zg-0.05,b,zg+0.01,'fill="url(#p-peb)" class="k4"'); return; } v.rect(a,zg-0.10,b,zg-0.03,'fill="url(#p-conccut)" class="k4"'); v.rect(a,zg-0.03,b,zg,DAX); }
+/* khung viền bục mộ (mặt cắt): lõi gạch; phương án đá: ốp đá mặt trên dày 30 và mặt ngoài dày 20; out = -1 mặt ngoài ở phía a, 1 ở phía b */
+function frameCut(v,a,b,z0,zt,out){ v.rect(a,z0,b,zt,'fill="url(#p-brick)" class="k2"'); if(isSoi()) return; v.rect(a,zt-0.03,b,zt,DAX); const zl=P.lv.lawn; if(out<0) v.rect(a,zl,a+0.02,zt-0.03,DAX); else v.rect(b-0.02,zl,b,zt-0.03,DAX); }
 const L_frameIn = (f,g) => g.L+f.pebFront+f.pebBack;   // chiều dài trong khung viền theo trục mộ
 const enclTop = () => P.lv.lawn + (P.encl.type==='curb' ? P.lv.curbUp : P.encl.h);          // đỉnh tường bao phía trước
 const sideBackTop = () => P.lv.lawn + (P.encl.type==='curb' ? P.lv.curbUp : P.encl.type==='ngai' ? wallEndH() : P.encl.h);
@@ -1413,9 +1439,9 @@ function planSheet(M){
   { const LA=latAll(R,L), st='fill="#f3d9c4" stroke="#7e3a1e" stroke-width=".14" stroke-dasharray=".6 .4"';
     LA.front.forEach(([a,b])=>v.rect(a,R.y0+0.035,b,L.iy0-0.035,st));
     LA.side.forEach(([a,b])=>{ v.rect(R.x0+0.035,a,L.ix0-0.035,b,st); v.rect(L.ix1+0.035,a,R.x1-0.035,b,st); }); }
-  // khung viền + sỏi + mộ
-  v.rect(L.gx1,L.yFF,L.gx2,L.yFB,'fill="url(#p-brick)" class="k3"');
-  v.rect(L.gx1+f.w,L.yFF+f.w,L.gx2-f.w,L.yFB-f.w,'fill="url(#p-peb)" stroke="#7b7f85" stroke-width=".12"');
+  // khung viền ốp đá xanh đen mài + nền đá xanh đen mài lát + mộ
+  v.rect(L.gx1,L.yFF,L.gx2,L.yFB,`fill="${frFill()}" class="k3"`);
+  v.rect(L.gx1+f.w,L.yFF+f.w,L.gx2-f.w,L.yFB-f.w,`fill="${nenFill()}" stroke="${isSoi()?'#7b7f85':'#bdb9b0'}" stroke-width=".2"`);
   for(const gr of L.graves) gravePlan(v,gr.x1,L.yGF,g);
   for(const gr of L.graves){ v.text(gr.xc,L.yGF+0.07,WHO[gr.who][0],'class="lbl-s b" style="fill:#fff"','middle',0,0.8); }
   vtPots(L).forEach(([x,y])=>{ cycadPlan(v,x,y); v.text(x,y-VT_POT.top/2-0.06,'VẠN TUẾ','class="lbl-s b halo"','middle',0,0); v.text(x,y-VT_POT.top/2-0.06,`chậu ${fmm(VT_POT.top)}`,'class="lbl-s halo"','middle',0,3.1);
@@ -1474,9 +1500,9 @@ function planSheet(M){
   extra+=`<text x="26" y="48" text-anchor="middle" class="lbl-s">Bắc (theo la bàn)</text>`;
   extra+=`<g transform="translate(26 54)"><line x1="0" y1="0" x2="0" y2="9" stroke="#111" stroke-width=".6"/><path d="M0 11 l-1.8 -3.2 h3.6z" fill="#111"/></g><text x="26" y="70" text-anchor="middle" class="lbl-s b">Hướng mộ</text><text x="26" y="73.2" text-anchor="middle" class="lbl-s">${Math.round((P.site.brgAB+360)%360)}° · ${dirName(P.site.brgAB)}</text>`;
   // chú giải
-  const lg=[['url(#p-pave)','Sân lát gạch nung xương cá, mặt sân '+flv(P.lv.lawn)],['url(#p-peb)','Sỏi trắng quanh mộ'],['url(#p-gran)',(isDX()?'Đá xanh vân mây':'Granite đen')+' (mộ)']
+  const lg=[['url(#p-pave)','Sân lát gạch nung xương cá, mặt sân '+flv(P.lv.lawn)],isSoi()?['url(#p-peb)','Sỏi trắng quanh mộ; khung viền gạch trần']:['url(#p-dax)','Đá xanh đen mài lát quanh mộ 300×150; khung viền ốp đá'],['url(#p-gran)',(isDX()?'Đá xanh vân mây':'Granite đen')+' (mộ)']
 ,
-            ['url(#p-brick)','Tường, khung viền bục mộ: gạch trần'],isVT()?['#cfe6bf','Vạn tuế trồng chậu trắng (tán cây nét đứt)']:['url(#p-soil)','Bồn trúc (có tấm chắn rễ)'],['url(#p-conc)','Bậc lên, ngưỡng lối vào'],
+            ['url(#p-brick)','Tường: gạch trần'],isVT()?['#cfe6bf','Vạn tuế trồng chậu trắng (tán cây nét đứt)']:['url(#p-soil)','Bồn trúc (có tấm chắn rễ)'],['url(#p-conc)','Bậc lên, ngưỡng lối vào'],
             ['url(#p-grit)','Đất ngoài khung (không xây)']];
   extra+=`<text x="16" y="240" class="lbl b">CHÚ GIẢI</text>`;
   lg.forEach(([fl,t],i)=>{ const cx=16+(i%3)*64, cy=244+Math.floor(i/3)*6.6; extra+=`<rect x="${cx}" y="${cy}" width="7" height="4.4" fill="${fl}" class="k3"/><text x="${cx+9}" y="${cy+3.4}" class="lbl-s">${esc(t)}</text>`; });
@@ -1504,7 +1530,7 @@ function elevSheet(M){
   if(isVT()) vtPots(L).forEach(([x])=>cycadElev(v,x,lawn));
   else { const nb=Math.max(1,Math.floor((L.ix1-L.ix0)/P.bamboo.spacing)), st=(L.ix1-L.ix0)/nb, xsB=[]; for(let i=0;i<nb;i++) xsB.push(L.ix0+st*(i+0.5));
   bambooElev(v,xsB,lawn,P.bamboo.h,7); }
-  const zg=zG(); if(zg>lawn+0.005) v.rect(L.gx1,lawn,L.gx2,zg+P.frame.up,'fill="url(#p-wall)" class="k3"');   // mặt trước bục mộ: thành gạch trần
+  const zg=zG(); if(zg>lawn+0.005) v.rect(L.gx1,lawn,L.gx2,zg+frUp(),`fill="${faceFill()}" class="k3"`);   // mặt trước bục mộ: ốp đá xanh đen mài hoặc gạch trần
   for(const gr of L.graves) graveFront(v,gr.xc,zg,g,gr.who==='anh');
   if(L.lu) (L.lu.type==='hoa'?hmElev:L.lu.type==='an'?anElev:luElev)(v,L.lu.xc,lawn,L.lu);
   // tường bên (nhìn đầu tường)
@@ -1546,7 +1572,7 @@ function elevSheet(M){
   const hAB=wallHAt(R.W,R.W); v.dim(R.x0,lawn,R.x0,lawn+hAB,-6,fm(hAB));
   let extra=titleAt(170,200,`MẶT ĐỨNG CHÍNH – NHÌN TỪ PHÍA CHÂN MỘ (${dirName(P.site.brgAB).toUpperCase()})`,'TL 1:30')+scaleBar(16,212,1000/30,3);
   const mats=[['url(#p-gran)',grFull()+': đế, thân, nắp, bia mộ']
-,['#c9a227','Chỉ viền bia mạ vàng; chữ khắc mạ vàng'],['#66716d',L.lu&&L.lu.type==='an'?'Bàn hương án: đá xanh Thanh Hóa nguyên khối, chạm sen; bệ xây gạch trần, mặt lát gạch nung':L.lu&&L.lu.type==='hoa'?'Lư hóa mã: đá xanh tạc; bệ lư xây gạch trần, mặt lát gạch nung':'Lư hương mái che: đá xanh Thanh Hóa tạc, ô chữ thếp vàng; bệ lư xây gạch trần, mặt lát gạch nung'],['url(#p-wall)','Mặt trong tường hậu, khung viền bục mộ: gạch đặc nung đỏ để trần, không trát, miết mạch lõm (mặt sau tường hậu trát mạ xi măng); đỉnh tường xây 1 hàng gạch nghiêng'],['#e7b48e','Ô hoa văn đất nung (chữ Thọ) chèn trên tường lửng, xếp từng cụm'],isVT()?['#7fae62',`Vạn tuế thân thấp trồng chậu vuông thuôn màu trắng (miệng ${fmm(VT_POT.top)}, cao ${fmm(VT_POT.h)}), cao cả chậu khoảng ${fm(VT_H)} m`]:['#7fae62',`Trúc cảnh mọc bụi, thân nhỏ, cắt tỉa giữ cao khoảng ${fm(P.bamboo.h)} m trên mặt sân`],['url(#p-grass2)','Cỏ trong ô trên mặt mộ'],['url(#p-pave)','Sân lát gạch nung đỏ kiểu xương cá, gạch 200 × 100, chít mạch']];
+,['#c9a227','Chỉ viền bia mạ vàng; chữ khắc mạ vàng'],['#66716d',L.lu&&L.lu.type==='an'?'Bàn hương án: đá xanh Thanh Hóa nguyên khối, chạm sen; bệ xây gạch trần, mặt lát gạch nung':L.lu&&L.lu.type==='hoa'?'Lư hóa mã: đá xanh tạc; bệ lư xây gạch trần, mặt lát gạch nung':'Lư hương mái che: đá xanh Thanh Hóa tạc, ô chữ thếp vàng; bệ lư xây gạch trần, mặt lát gạch nung'],...(isSoi()?[]:[['url(#p-dax)','Thành bục mộ, khung viền, nền quanh mộ: đá xanh đen mài, viên 300 × 150 xếp so le, mạch sáng']]),['url(#p-wall)',isSoi()?'Mặt trong tường hậu, khung viền bục mộ: gạch đặc nung đỏ để trần,':'Mặt trong tường hậu: gạch đặc nung đỏ để trần, không trát, miết mạch lõm (mặt sau tường hậu trát mạ xi măng); đỉnh tường xây 1 hàng gạch nghiêng'],['#e7b48e','Ô hoa văn đất nung (chữ Thọ) chèn trên tường lửng, xếp từng cụm'],isVT()?['#7fae62',`Vạn tuế thân thấp trồng chậu vuông thuôn màu trắng (miệng ${fmm(VT_POT.top)}, cao ${fmm(VT_POT.h)}), cao cả chậu khoảng ${fm(VT_H)} m`]:['#7fae62',`Trúc cảnh mọc bụi, thân nhỏ, cắt tỉa giữ cao khoảng ${fm(P.bamboo.h)} m trên mặt sân`],['url(#p-grass2)','Cỏ trong ô trên mặt mộ'],['url(#p-pave)','Sân lát gạch nung đỏ kiểu xương cá, gạch 200 × 100, chít mạch']];
   extra+=`<text x="16" y="230" class="lbl b">VẬT LIỆU HOÀN THIỆN</text>`;
   { let col=0, y=234; const half=Math.ceil(mats.length/2);
     mats.forEach(([fl,t],i)=>{ if(i===half){ col=1; y=234; } const x=16+col*164, ls=wrapText(t,118);
@@ -1572,7 +1598,7 @@ function sectCuts(M){ const {R,L}=M, LA=latAll(R,L), cuts=[];
   if(L.gates.length>1){ const gt=L.gates[0]; cuts.push({kind:'L', x:gt.xc, why:`dọc qua lối vào bên phía cạnh AB${gName(gt.xc)?' và '+gName(gt.xc):''}`}); }
   const lg=LA.front[0]; if(lg) cuts.push({kind:'L', x:(lg[0]+lg[1])/2, why:'dọc qua đoạn tường có ô hoa văn, phần sân ngoài bục mộ'+(isVT()?'':' và bồn trúc')});
   if(L.lu) cuts.push({kind:'T', y:L.lu.yc, why:`ngang qua sân trước, ${luName(L.lu)} và hai tường bên`});
-  cuts.push({kind:'T', y:(L.yGF+L.yGB)/2, why:'ngang qua 3 mộ, 3 huyệt và bục mộ'});
+  cuts.push({kind:'T', y:L.hc, why:'ngang qua 3 mộ, tim 3 huyệt và bục mộ'});
   cuts.forEach((c,i)=>{ c.key=String(i+1); c.code=i===0?'KT-03':`KT-03.${i+1}`; }); return cuts; }
 
 /* phần chung: danh sách chú thích đánh số dưới hình + khung tên */
@@ -1594,7 +1620,9 @@ function sectLong(M,cut){
   const zz=latZ(), latG = zz ? latAll(R,L).front.find(([a,b])=>xs>=a && xs<=b) : null;
   const Lw=Math.min(yOF,R.y0, gAt&&gAt.step.treads.length?gAt.step.y1:R.y0)-0.45, Rw=Math.max(yOB,R.y1)+0.45, zTop=Math.max(lawn+backPlantH(), lawn+wh+(roofOn()?roofGeom().back:0))+0.05;
   const zDim=Math.min(-0.62,zG()-P.vault.slab-P.vault.depth-P.vault.rD-P.vault.aD-P.vault.lot-0.14);
-  const v=View.fit(50,1,[Lw-0.15,Math.min(-0.9,zDim-0.3),Rw+0.35,zTop],[22,14,318,206]);
+  const bbL=[Lw-0.15,Math.min(-0.9,zDim-0.3),Rw+0.35,zTop+0.12];   // chọn tỷ lệ tiêu chuẩn lớn nhất mà hình vẫn nằm gọn trong khung vẽ
+  const [sc,scTxt]=[[50,'1:20'],[40,'1:25'],[100/3,'1:30'],[25,'1:40']].find(([k])=>(bbL[2]-bbL[0])*k<=318 && (bbL[3]-bbL[1])*k<=206) || [25,'1:40'];
+  const v=View.fit(sc,1,bbL,[22,14,318,206]);
   // đất nền, ngoài ranh
   v.rect(Lw,Math.min(-0.8,zDim-0.2),Rw,ex,'fill="url(#p-earth)"'); v.rect(Lw,ex,yOF,0,'fill="url(#p-earth)"'); v.rect(yOB,ex,Rw,0,'fill="url(#p-earth)"');
   v.rect(Lw,-0.08,yOF,0,'fill="url(#p-conccut)" class="k3"'); v.rect(yOB,-0.08,Rw,0,'fill="url(#p-conccut)" class="k3"');
@@ -1610,19 +1638,19 @@ function sectLong(M,cut){
   v.line(L.iy0,ex,L.ywf,ex,'class="k4 dash"');
   // huyệt (chỉ khi cắt qua mộ)
   let gc=0, hy1=0, hy2=0, zs=zg-vt.slab, zb=zs-vt.depth, yb2=0, z1=zg+g.H0, z3=0, gc1=0, gc2=0;
-  if(gr){ gc=(L.yGF+L.yGB)/2; hy1=gc-vt.inL/2-vt.wt; hy2=gc+vt.inL/2+vt.wt;
+  if(gr){ gc=L.hc; hy1=gc-vt.inL/2-vt.wt; hy2=gc+vt.inL/2+vt.wt;
     vaultBase2D(v,gc,vt.inL/2+vt.wt,vt.rL/2,vt.aL/2,zb,true);
     if(gr.who==='anh'){ quach2D(v,gc,vt.tL,vt.qiL,zb-vt.rD); }
     v.rect(hy1,zb,hy1+vt.wt,zs,'fill="url(#p-brick)" class="k2"'); v.rect(hy2-vt.wt,zb,hy2,zs,'fill="url(#p-brick)" class="k2"');
     v.rect(hy1+vt.wt,zb,hy2-vt.wt,zs,'fill="#fff" class="k3"'); v.text(gc,(zb+zs)/2,'LÒNG HUYỆT','class="lbl-s"','middle',0,0.7); }
-  // bục mộ: khung viền gạch, đất đầm, sỏi; mộ
+  // bục mộ: khung viền gạch ốp đá, đất đầm, đá xanh đen mài lát; mộ
   if(inPlat){
-    const fillTo=zg-0.05;
+    const fillTo=zg-nenD();
     if(zg>lawn+0.005){ if(gr){ const o=vt.inL/2+vt.wt; v.rect(L.yFF+f.w,lawn,gc-o,fillTo,'fill="url(#p-fill)"'); v.rect(gc+o,lawn,L.yFB-f.w,fillTo,'fill="url(#p-fill)"'); } else v.rect(L.yFF+f.w,lawn,L.yFB-f.w,fillTo,'fill="url(#p-fill)"'); }
-    if(gr){ const SL=slabWL().L, OL=openWL().L, op=Math.abs(xs-gr.xc)<openWL().W/2; if(op){ v.rect(gc-SL/2,zs,gc-OL/2,zg,'fill="url(#p-conccut)" class="k2"'); v.rect(gc+OL/2,zs,gc+SL/2,zg,'fill="url(#p-conccut)" class="k2"'); v.rect(gc-OL/2,zs,gc+OL/2,zg,'fill="#fff"'); } else v.rect(gc-SL/2,zs,gc+SL/2,zg,'fill="url(#p-conccut)" class="k2"');
-      v.rect(L.yFF+f.w,fillTo,L.yGF,zg+0.01,'fill="url(#p-peb)" class="k4"'); v.rect(L.yGB,fillTo,L.yFB-f.w,zg+0.01,'fill="url(#p-peb)" class="k4"'); }
-    else v.rect(L.yFF+f.w,fillTo,L.yFB-f.w,zg+0.01,'fill="url(#p-peb)" class="k4"');
-    v.rect(L.yFF,lawn-0.08,L.yFF+f.w,zg+f.up,'fill="url(#p-brick)" class="k2"'); v.rect(L.yFB-f.w,lawn-0.08,L.yFB,zg+f.up,'fill="url(#p-brick)" class="k2"'); }
+    if(gr){ const SF=slabWL().F, SB=slabWL().B, OL=openWL().L, op=Math.abs(xs-gr.xc)<openWL().W/2; if(op){ v.rect(gc-SF,zs,gc-OL/2,zg,'fill="url(#p-conccut)" class="k2"'); v.rect(gc+OL/2,zs,gc+SB,zg,'fill="url(#p-conccut)" class="k2"'); v.rect(gc-OL/2,zs,gc+OL/2,zg,'fill="#fff"'); } else v.rect(gc-SF,zs,gc+SB,zg,'fill="url(#p-conccut)" class="k2"');
+      daxLay(v,L.yFF+f.w,L.yGF,zg); daxLay(v,L.yGB,L.yFB-f.w,zg); }
+    else daxLay(v,L.yFF+f.w,L.yFB-f.w,zg);
+    frameCut(v,L.yFF,L.yFF+f.w,lawn-0.08,zg+frUp(),-1); frameCut(v,L.yFB-f.w,L.yFB,lawn-0.08,zg+frUp(),1); }
   if(gr){ const ledge=g.L-g.sBack-g.sT-g.bL, z0=zg, z2=z1+g.bH, yb1=L.yGF+ledge; yb2=yb1+g.bL; z3=z2+g.lH; const yl1=yb2-g.lL;
     v.rrectT(L.yGF,z0,L.yGB,z1,P.grave.rE,'fill="url(#p-grancut)" class="k2"'); v.rrect4(yb1,z1,yb2,z2,[0,0,P.grave.rE,0],'fill="url(#p-grancut)" class="k2"'); v.rrect4(yl1,z2,yb2,z3,[0,0,P.grave.rE,0],'fill="url(#p-grancut)" class="k2"');
     gc1=(yl1+yb2)/2-g.gL/2; gc2=gc1+g.gL;
@@ -1692,14 +1720,14 @@ function sectLong(M,cut){
   if(isVT() && !inPlat) notes.push([L.yFB+P.bamboo.gap/2,lawn-0.02,6,-12,`Không trồng trúc: khung viền mộ cách mặt trong tường hậu ${fmm(P.bamboo.gap)}, khe này lát gạch như sân.`]);
   if(gAt) notes.push([(gAt.step.treads[0].y1+gAt.step.treads[0].y2)/2,gAt.step.treads[0].z-0.03,-6,10,`Tam cấp ${gAt.step.n} bậc, mỗi bậc cao ${fmm(gAt.step.rz)}, mặt bậc ${fmm(P.encl.stepD)}, nhô ra ngoài khung ${fmm(R.y0-gAt.step.y1)}; lõi bê tông, mặt bậc lát gạch nung, mũi bậc gạch nghiêng.`]);
   if(luCut) notes.push(L.lu.type==='an'?[L.lu.yc,lawn+L.lu.A.zLeg+0.5*L.lu.A.hb,-4,-12,`Bàn hương án đá xanh nguyên khối, mặt bàn ${fmm(L.lu.W)}×${fmm(L.lu.D)}, cao ${fmm(L.lu.H)} trên mặt bệ; bệ gạch ${fmm(L.lu.sW)}×${fmm(L.lu.sD)} cao ${fmm(LU_PAD_H)}, lưng bệ sát khung viền mộ, xây trên bê tông lót dày 100. Chi tiết: KT-04.2.`]:L.lu.type==='hoa'?[L.lu.yc,lawn+LU_PAD_H+0.5*L.lu.H,-4,-12,`Lư hóa mã đá xanh Ø${fmm(L.lu.d)}, cao ${fmm(L.lu.H)}, trên bệ gạch ${fmm(L.lu.s)}×${fmm(L.lu.s)} cao ${fmm(LU_PAD_H)}; không làm móng riêng, bệ xây trên mặt sân lát gạch.`]:[L.lu.yc,lawn+L.lu.G.zk-0.12,-4,-12,`Lư hương mái che đá xanh ${fmm(L.lu.W)}×${fmm(L.lu.D)}, cao ${fmm(L.lu.H)} trên mặt sân, mặt khay cao ${fmm(L.lu.G.zk)}; bệ gạch ${fmm(L.lu.sW)}×${fmm(L.lu.sD)} cao ${fmm(LU_PAD_H)}, lưng bệ sát khung viền mộ, xây trên bê tông lót dày 100. Chi tiết lư: KT-04.2.`]);
-  if(inPlat) notes.push([L.yFF+f.w/2,zg-0.06,-3,-13,`Bục mộ cao ${fmm(zg-lawn)}: khung viền xây gạch trần dày ${fmm(f.w)} kiêm thành bục, nổi ${fmm(f.up)} trên mặt sỏi; trong đổ đất đầm chặt.`],
-                        [gr?(L.yGB+L.yFB-f.w)/2:(L.yFF+L.yFB)/2,zg-0.02,8,-14,'Sỏi trắng dày 50 trên vải địa kỹ thuật.']);
+  if(inPlat) notes.push([L.yFF+f.w/2,zg-0.06,-3,-13,`Bục mộ cao ${fmm(zg-lawn)}: ${frTxt(f)}; trong đổ đất đầm chặt.`],
+                        [gr?(L.yGB+L.yFB-f.w)/2:(L.yFF+L.yFB)/2,zg-0.02,8,-14,nenTxt()]);
   if(gr) notes.push([L.yGF+0.08,zg+0.09,-12,-14,`Mộ ${grName()} ${fmm(g.W)}
 ×${fmm(g.L)}, cao ${fmm(g.H0+g.sH)} tới đỉnh bia; đế, thân, nắp bo cạnh R${fmm(P.grave.rE)}.`],
-                    [L.yGF+0.03,zg-0.05,-14,-6,`Đế đỡ mộ BTCT dày ${fmm(vt.slab)}, bản rộng ${fmm(vt.bL)} (đầu) / ${fmm(vt.bW)} (bên), phủ thành huyệt và chìa vào trong; miệng huyệt ${fmm(openWL().W)}×${fmm(openWL().L)}; mộ đá úp thẳng lên, không làm nắp. Lòng mộ rỗng thông xuống huyệt; khay ô cỏ có lỗ thông thiên Ø${fmm(TT_D)}.`],
-                    [hy1+vt.wt/2,(zb+zs)/2,-14,4,`Huyệt gạch đặc ${fmm(vt.wt)}, lòng ${fmm(vt.inW)}×${fmm(vt.inL)}, sâu ${fmm(vt.depth)}; chi tiết xem KT-05, KT-06.`],
-                    [gc,zb-vt.rD-vt.aD-vt.lot*0.5,12,10,`Đáy huyệt 3 cấp: hốc đặt quách ${fmm(vt.rW)}×${fmm(vt.rL)} sâu ${fmm(vt.rD)}; hốc thông âm ${fmm(vt.aW)}×${fmm(vt.aL)} sâu ${fmm(vt.aD)} dưới quách; tất cả nằm trong khối móng BTCT, dưới thông âm còn móng dày ${fmm(vt.lot)}; tường huyệt xây trên móng.`]);
-  return sectFinish(v,notes,`MẶT CẮT ${cut.key}-${cut.key} – ${cut.why.toUpperCase()}, NHÌN VỀ PHÍA ${dirName(brgOfM(1,0)).toUpperCase()}`,'1:20',cut.code,`Mặt cắt ${cut.key}-${cut.key}`,SECT_TB); }
+                    [L.yGF+0.03,zg-0.05,-14,-6,`Đế đỡ mộ BTCT dày ${fmm(vt.slab)}, bản rộng ${fmm(slabBand().F)} (phía chân) / ${fmm(slabBand().B)} (phía bia) / ${fmm(vt.bW)} (bên), phủ thành huyệt và chìa vào trong; miệng huyệt ${fmm(openWL().W)}×${fmm(openWL().L)}; mộ đá úp thẳng lên, không làm nắp. Lòng mộ rỗng thông xuống huyệt; khay ô cỏ có lỗ thông thiên Ø${fmm(TT_D)}.`],
+                    [hy1+vt.wt/2,(zb+zs)/2,-14,4,`Huyệt gạch đặc ${fmm(vt.wt)}, lòng ${fmm(vt.inW)}×${fmm(vt.inL)}, sâu ${fmm(vt.depth)}; tim huyệt, tim quách trùng tim ô cỏ${vOff()>0.001?`, lùi về phía bia ${fmm(vOff())} so với tim đế mộ`:''}; chi tiết xem KT-05, KT-06.`],
+                    [hy1+vt.wt*0.5,zb-vt.rD-vt.aD*0.6,-12,9,`Đáy huyệt 3 cấp: hốc đặt quách ${fmm(vt.rW)}×${fmm(vt.rL)} sâu ${fmm(vt.rD)}; hốc thông âm ${fmm(vt.aW)}×${fmm(vt.aL)} sâu ${fmm(vt.aD)} dưới quách; tất cả nằm trong khối móng BTCT, dưới thông âm còn móng dày ${fmm(vt.lot)}; tường huyệt xây trên móng.`]);
+  return sectFinish(v,notes,`MẶT CẮT ${cut.key}-${cut.key} – ${cut.why.toUpperCase()}, NHÌN VỀ PHÍA ${dirName(brgOfM(1,0)).toUpperCase()}`,scTxt,cut.code,`Mặt cắt ${cut.key}-${cut.key}`,SECT_TB); }
 
 /* ---------- MẶT CẮT NGANG (song song tường hậu, nhìn về phía tường hậu; trái → phải như mặt đứng KT-02) ---------- */
 function sectTrans(M,cut){
@@ -1719,7 +1747,7 @@ function sectTrans(M,cut){
   const potT=vtPots(L).filter(([px,py])=>Math.abs(yc-py)<=VT_POT.top/2 || py>yc).map(([px,py])=>({px,cut:Math.abs(yc-py)<=VT_POT.top/2}));
   potT.forEach(q=>cycadElev(v,q.px,lawn,q.cut));
   // phía sau: bục mộ và mộ (khi cắt ở sân trước)
-  if(yc<L.yFF){ if(zg>lawn+0.005) v.rect(L.gx1,lawn,L.gx2,zg+f.up,'fill="url(#p-wall)" class="k3"'); for(const gq of L.graves) graveFront(v,gq.xc,zg,g,false); }
+  if(yc<L.yFF){ if(zg>lawn+0.005) v.rect(L.gx1,lawn,L.gx2,zg+frUp(),`fill="${faceFill()}" class="k3"`); for(const gq of L.graves) graveFront(v,gq.xc,zg,g,false); }
   if(yc<L.ywf-P.encl.postW) postRects(R,L).filter(q=>q[3]>L.ywf-0.01).forEach(([a,b])=>postElev(v,a,b,0,true));   // trụ góc phía sau (nhìn thấy)
   // tôn nền + lớp sân
   v.rect(L.ix0,ex,L.ix1,lawn-P.lv.topsoil,'fill="url(#p-fill)"'); v.rect(L.ix0,lawn-P.lv.topsoil,L.ix1,lawn-0.08,'fill="url(#p-conccut)"'); v.rect(L.ix0,lawn-0.08,L.ix1,lawn-0.05,'fill="url(#p-fill)"');
@@ -1732,12 +1760,12 @@ function sectTrans(M,cut){
       if(isRender()) v.rect(a-PL.capOv,sTop-PL.cap,b+PL.capOv,sTop,`fill="${PL.cL}" stroke="${PL.st}" stroke-width=".2"`); } }
   // bục mộ (cắt)
   let gp=[];
-  if(inPlat){ if(zg>lawn+0.005) v.rect(L.gx1+f.w,lawn,L.gx2-f.w,zg-0.05,'fill="url(#p-fill)"');
-    v.rect(L.gx1+f.w,zg-0.05,L.gx2-f.w,zg+0.01,'fill="url(#p-peb)" class="k4"');
-    v.rect(L.gx1,lawn-0.08,L.gx1+f.w,zg+f.up,'fill="url(#p-brick)" class="k2"'); v.rect(L.gx2-f.w,lawn-0.08,L.gx2,zg+f.up,'fill="url(#p-brick)" class="k2"'); }
+  if(inPlat){ if(zg>lawn+0.005) v.rect(L.gx1+f.w,lawn,L.gx2-f.w,zg-nenD(),'fill="url(#p-fill)"');
+    daxLay(v,L.gx1+f.w,L.gx2-f.w,zg);
+    frameCut(v,L.gx1,L.gx1+f.w,lawn-0.08,zg+frUp(),-1); frameCut(v,L.gx2-f.w,L.gx2,lawn-0.08,zg+frUp(),1); }
   // mộ, bản đệm, huyệt (cắt)
   const ledge=g.L-g.sBack-g.sT-g.bL, yb1=L.yGF+ledge, yb2=yb1+g.bL, yl1=yb2-g.lL, gy1=(yl1+yb2)/2-g.gL/2, gy2=gy1+g.gL;
-  const zs=zg-vt.slab, zb=zs-vt.depth, gcY=(L.yGF+L.yGB)/2, inV = Math.abs(yc-gcY)<=vt.inL/2+vt.wt, inVoid = Math.abs(yc-gcY)<vt.inL/2, inOpen = Math.abs(yc-gcY)<openWL().L/2;
+  const zs=zg-vt.slab, zb=zs-vt.depth, gcY=L.hc, inV = Math.abs(yc-gcY)<=vt.inL/2+vt.wt, inVoid = Math.abs(yc-gcY)<vt.inL/2, inOpen = Math.abs(yc-gcY)<openWL().L/2;
   if(inGr) for(const gq of L.graves){ const xc=gq.xc, z1=zg+g.H0, z2=z1+g.bH, z3=z2+g.lH;
     if(inOpen){ v.rect(xc-slabWL().W/2,zs,xc-openWL().W/2,zg,'fill="url(#p-conccut)" class="k2"'); v.rect(xc+openWL().W/2,zs,xc+slabWL().W/2,zg,'fill="url(#p-conccut)" class="k2"'); } else v.rect(xc-slabWL().W/2,zs,xc+slabWL().W/2,zg,'fill="url(#p-conccut)" class="k2"');
     v.rrectT(xc-g.W/2,zg,xc+g.W/2,z1,P.grave.rE,'fill="url(#p-grancut)" class="k2"'); if(inOpen) v.rect(xc-openWL().W/2,zs,xc+openWL().W/2,z1-0.02,'fill="#fff"');
@@ -1780,7 +1808,7 @@ function sectTrans(M,cut){
     [L.ix0+0.25,(ex+lawn-P.lv.topsoil)/2,6,12,'Đất hoặc cát tôn nền, đầm chặt từng lớp 150.'],
     [(cutsX[0]?cutsX[0][0]+0.3:L.ix0+0.3),lawn-0.025,6,-12,`Sân lát gạch nung xương cá 50, cát đệm 30, bê tông lót ${fmm(ptH)}.`],
     [R.x1-0.6,(lawn+WS.hmin*0.5),-6,-12,'Tường hậu nhìn thấy phía sau mặt cắt (dáng núi, xem KT-02).']];
-  if(inPlat) notes.push([L.gx2-f.w/2,zg-0.06,-6,-12,`Khung viền gạch trần dày ${fmm(f.w)} kiêm thành bục cao ${fmm(zg-lawn)}; trong đổ đất đầm, trên rải sỏi trắng 50.`]);
+  if(inPlat) notes.push([L.gx2-f.w/2,zg-0.06,-6,-12,`Bục mộ cao ${fmm(zg-lawn)}: ${frTxt(f)}; trong đổ đất đầm. ${nenTxt()}`]);
   if(inGr) notes.push([L.graves[1].xc,zg+0.09,-6,-14,`Đế mộ ${grName()} cắt ngang
 , rộng ${fmm(g.W)}, cao ${fmm(g.H0)}; thân ${fmm(g.bW)}, nắp ${fmm(g.lW)} có ô cỏ ${fmm(g.gW)}; bo cạnh R${fmm(P.grave.rE)}.`],
                       [L.graves[1].xc+g.W/2-0.05,zg-0.05,6,10,`Đế đỡ mộ BTCT dày ${fmm(vt.slab)}, bản rộng ${fmm(vt.bW)} chìa vào trong, đỡ thẳng đế mộ; lòng mộ thông xuống huyệt, khay ô cỏ có lỗ thông thiên Ø${fmm(TT_D)}.`]);
@@ -1799,10 +1827,10 @@ const POST_PAD={ s:0.60, h:0.20, bot:-0.60 };
 const STEEL_KG={6:0.222,8:0.395,10:0.617,12:0.888};
 // số liệu hình học chung của phần móng
 function foundGeo(M){ const {R,L}=M, e=P.encl, vt=P.vault, lawn=P.lv.lawn, zg=zG();
-  const oW=vt.inW/2+vt.wt, oL=vt.inL/2+vt.wt, hc=(L.yGF+L.yGB)/2, zs=zg-vt.slab, zb=zs-vt.depth, {zr,za,zl}=vaultZ(zb);
+  const oW=vt.inW/2+vt.wt, oL=vt.inL/2+vt.wt, hc=L.hc, zs=zg-vt.slab, zb=zs-vt.depth, {zr,za,zl}=vaultZ(zb);
   const Le=R.W+2*(L.ywf-R.y0), WS=wallStats(R.W), nP=Math.max(2,Math.ceil((R.W-0.2)/2)+1);
   const posts=[...Array(nP)].map((_,i)=>R.x0+0.1+(R.W-0.2)*i/(nP-1));   // tim trụ BTCT ẩn trong tường hậu, cách nhau ≤ 2 m
-  return {R,L,e,vt,lawn,zg,oW,oL,hc,zs,zb,zr,za,zl,Le,WS,posts,mW:2*oW+0.1,mL:2*oL+0.1,SW:slabWL().W,SL:slabWL().L,OW:openWL().W,OL:openWL().L}; }
+  return {R,L,e,vt,lawn,zg,oW,oL,hc,zs,zb,zr,za,zl,Le,WS,posts,mW:2*oW+0.1,mL:2*oL+0.1,SW:slabWL().W,SL:slabWL().L,SF:slabWL().F,SB:slabWL().B,OW:openWL().W,OL:openWL().L}; }
 // khối lượng móng (m³): bê tông từng cấu kiện, bê tông lót, đất đào hố móng (mở rộng 200 mỗi phía quanh lớp lót)
 function foundVol(G){ const {R,L,e,vt,lawn,zb,zl}=G, t=e.t, d=e.depth, nG=L.graves.length, nPost=postRects(R,L).length, ex=P.lv.exist, ws=0.2, dp=z=>Math.max(0,ex-z);
   const vM1=R.W*0.5*0.25, vM2=G.Le*((t+0.15)*0.15+t*(d+lawn)), vM3=nPost*POST_PAD.s**2*POST_PAD.h;
@@ -1841,7 +1869,7 @@ function rebarList(G){ const {R,L,e,vt,lawn}=G, out=[], add=(mk,el,d,shape,len,n
   const nG=L.graves.length;
   add(14,'M4 · móng huyệt',10,'line',G.mL-0.07,Math.floor((G.mW-0.07)/0.2)+1,nG,'lưới đáy, thanh dọc theo mộ a200');
   add(15,'M4 · móng huyệt',10,'line',G.mW-0.07,Math.floor((G.mL-0.07)/0.2)+1,nG,'lưới đáy, thanh ngang mộ a200');
-  add(16,'Đế đỡ mộ',10,'line',G.SW-0.05,(Math.floor((vt.bL-0.05)/0.15)+1)*2*2,nG,'bản hai đầu, 2 lớp a150');
+  add(16,'Đế đỡ mộ',10,'line',G.SW-0.05,(Math.floor((G.SF-G.OL/2-0.05)/0.15)+Math.floor((G.SB-G.OL/2-0.05)/0.15)+2)*2,nG,'bản hai đầu, 2 lớp a150');
   add(17,'Đế đỡ mộ',10,'line',G.SL-0.05,(Math.floor((vt.bW-0.05)/0.15)+1)*2*2,nG,'bản hai bên, 2 lớp a150');
   add(18,'Đế đỡ mộ',12,'line',Math.min(G.OW+0.6,G.SW-0.05),2,nG,'viền miệng huyệt, cạnh ngang');
   add(19,'Đế đỡ mộ',12,'line',Math.min(G.OL+0.6,G.SL-0.05),2,nG,'viền miệng huyệt, cạnh dọc');
@@ -2023,17 +2051,18 @@ function foundSheets(M){
       const yB=v.P(0,-hl)[1]; v.dimRowY(-hw,-hl,hw,-hl,yB+6,fmm(G.mW),{halo:true}); const xR=v.P(hw,0)[0]; v.dimRowX(hw,-hl,hw,hl,xR+6,fmm(G.mL),{halo:true});
       out+=v.html(); extra+=head(16,20,'C1','THÉP ĐÁY MÓNG HUYỆT M4 (mặt bằng, lớp dưới)','1:15'); }
     // C2: thép đế đỡ mộ 1:20 (mặt bằng)
-    { const v=View.fit(1000/15,1,[-G.SW/2,-G.SL/2,G.SW/2,G.SL/2],[112,28,92,112]), hw=G.SW/2, hl=G.SL/2, ow=G.OW/2, ol=G.OL/2, c=0.025;
-      v.rect(-hw,-hl,hw,hl,'fill="url(#p-conc)" stroke="#111" stroke-width=".35"'); v.rect(-ow,-ol,ow,ol,'fill="#fff" stroke="#111" stroke-width=".35"');
-      const n16=Math.floor((vt.bL-0.05)/0.15)+1, n17=Math.floor((vt.bW-0.05)/0.15)+1;
-      for(const sg of [1,-1]) for(let i=0;i<n16;i++){ const y=sg*(ol+0.025+(vt.bL-0.05)*(n16===1?0.5:i/(n16-1))); v.line(-hw+c,y,hw-c,y,RB2); }
-      for(const sg of [1,-1]) for(let i=0;i<n17;i++){ const x=sg*(ow+0.025+(vt.bW-0.05)*(n17===1?0.5:i/(n17-1))); v.line(x,-hl+c,x,hl-c,RB); }
+    { const hF=G.SF, hB=G.SB, v=View.fit(1000/15,1,[-G.SW/2,-hF,G.SW/2,hB],[112,28,92,112]), hw=G.SW/2, ow=G.OW/2, ol=G.OL/2, c=0.025;
+      v.rect(-hw,-hF,hw,hB,'fill="url(#p-conc)" stroke="#111" stroke-width=".35"'); v.rect(-ow,-ol,ow,ol,'fill="#fff" stroke="#111" stroke-width=".35"');
+      const n17=Math.floor((vt.bW-0.05)/0.15)+1;
+      for(const [sg,bw] of [[1,hB-ol],[-1,hF-ol]]){ const n16=Math.floor((bw-0.05)/0.15)+1; for(let i=0;i<n16;i++){ const y=sg*(ol+0.025+(bw-0.05)*(n16===1?0.5:i/(n16-1))); v.line(-hw+c,y,hw-c,y,RB2); } }
+      for(const sg of [1,-1]) for(let i=0;i<n17;i++){ const x=sg*(ow+0.025+(vt.bW-0.05)*(n17===1?0.5:i/(n17-1))); v.line(x,-hF+c,x,hB-c,RB); }
+      if(hF-hB>0.01){ v.text(-hw/2-ow/2,-(ol+hF)/2,'phía chân','class="lbl-s halo"','middle',0,0.8); v.text(-hw/2-ow/2,(ol+hB)/2,'phía bia','class="lbl-s halo"','middle',0,0.8); }
       const l18=bar(18).len/2, l19=bar(19).len/2;
       for(const sg of [1,-1]){ v.line(-l18,sg*(ol+0.04),l18,sg*(ol+0.04),'stroke="#111" stroke-width=".55"'); v.line(sg*(ow+0.04),-l19,sg*(ow+0.04),l19,'stroke="#111" stroke-width=".55"'); }
       v.text(0,0,'MIỆNG HUYỆT','class="lbl-s b halo"','middle',0,0.8);
-      bmk(v,0.3,hl-0.06,6,-6,16,`Ø10a150 ×2 lớp`); bmk(v,-hw+0.06,-0.2,-6,4,17,`Ø10a150 ×2 lớp`); bmk(v,-0.2,-ol-0.04,-6,7,18,`2Ø12`); bmk(v,ow+0.04,0.25,7,-4,19,`2Ø12`);
-      const yB=v.P(0,-hl)[1]; [[-hw,-ow],[-ow,ow],[ow,hw]].forEach(([a,b])=>v.dimRowY(a,-hl,b,-hl,yB+6,fmm(b-a),{halo:true}));
-      const xR=v.P(hw,0)[0]; [[-hl,-ol],[-ol,ol],[ol,hl]].forEach(([a,b])=>v.dimRowX(hw,a,hw,b,xR+6,fmm(b-a),{halo:true}));
+      bmk(v,0.3,hB-0.06,6,-6,16,`Ø10a150 ×2 lớp`); bmk(v,-hw+0.06,-0.2,-6,4,17,`Ø10a150 ×2 lớp`); bmk(v,-0.2,-ol-0.04,-6,7,18,`2Ø12`); bmk(v,ow+0.04,0.25,7,-4,19,`2Ø12`);
+      const yB=v.P(0,-hF)[1]; [[-hw,-ow],[-ow,ow],[ow,hw]].forEach(([a,b])=>v.dimRowY(a,-hF,b,-hF,yB+6,fmm(b-a),{halo:true}));
+      const xR=v.P(hw,0)[0]; [[-hF,-ol],[-ol,ol],[ol,hB]].forEach(([a,b])=>v.dimRowX(hw,a,hw,b,xR+6,fmm(b-a),{halo:true}));
       out+=v.html(); extra+=head(112,20,'C2','THÉP ĐẾ ĐỠ MỘ (mặt bằng; lớp trên giống lớp dưới)','1:15'); }
     // C3: neo, nối thép điển hình (không tỷ lệ)
     { const x0=212, y0=34; let s='';
@@ -2078,7 +2107,7 @@ function foundSheets(M){
       hS(v,[-b.s/2,b.s/2],lawn-P.lv.topsoil-0.12,5); vS(v,b.s/2+0.15,[lawn-P.lv.topsoil,lawn-0.08,lawn-0.05,lawn,lawn+LU_PAD_H],5);
       out+=v.html(); extra+=head(290,152,'LƯ','BỆ LƯ HÓA MÃ','1:20'); }
     // bệ lư hương mái che, cắt dọc qua tim lư (trái: phía lối vào, phải: khung viền mộ giữa)
-    if(L.lu && (L.lu.type==='mai'||L.lu.type==='an')){ const b=L.lu, s2=b.sD/2, d2=(b.fD||b.D)/2, ts=P.lv.topsoil, zs0=lawn-ts-0.12, fw=P.frame.w, zf=lawn+(P.frame.rise||0)+P.frame.up, xb=s2+b.behind;
+    if(L.lu && (L.lu.type==='mai'||L.lu.type==='an')){ const b=L.lu, s2=b.sD/2, d2=(b.fD||b.D)/2, ts=P.lv.topsoil, zs0=lawn-ts-0.12, fw=P.frame.w, zf=lawn+(P.frame.rise||0)+frUp(), xb=s2+b.behind;
       const v=View.fit(50,1,[-s2-0.22,zs0,xb+fw+0.06,lawn+LU_PAD_H+0.2],[290,160,52,42]);
       v.rect(-s2-0.22,zs0,xb,lawn-ts,FILL); v.rect(-s2-0.22,lawn-ts,-s2-0.1,lawn-0.08,LOT); v.rect(-s2-0.1,lawn-0.18,xb,lawn-0.08,LOT);
       v.rect(-s2-0.22,lawn-0.08,-s2,lawn-0.05,FILL); v.rect(-s2-0.22,lawn-0.05,-s2,lawn,'fill="#cf9273" stroke="#8a5a44" stroke-width=".14"');
@@ -2271,7 +2300,7 @@ function luSheet(M){ const lu=M.L.lu; if(lu && lu.type==='an') return anSheet(M)
 /* KT-05: mặt bằng phần ngầm toàn khu, cắt ngang ngay dưới bản đệm */
 function vaultPlanSheet(M){
   const {R,L}=M, g=P.grave, vt=P.vault, lawn=zG(), ex=P.lv.exist;   // lawn ở đây = mặt đặt đế mộ
-  const iL=vt.inL/2, iW=vt.inW/2, oL=iL+vt.wt, oW=iW+vt.wt, lo=0.05, ws=0.20, ft=0.15, hc=(L.yGF+L.yGB)/2;
+  const iL=vt.inL/2, iW=vt.inW/2, oL=iL+vt.wt, oW=iW+vt.wt, lo=0.05, ws=0.20, ft=0.15, hc=L.hc;
   const zs=lawn-vt.slab, zb=zs-vt.depth, zr=zb-vt.rD, za=zr-vt.aD, zl=za-vt.lot, dig=ex-zl;
   const BR='fill="url(#p-brick)" class="k2"', CUT='fill="url(#p-conccut)" class="k2"', FT='fill="none" class="k4 dash"';
   const TIEU='fill="none" stroke="#2a6fb0" stroke-width=".3" stroke-dasharray="1.6 .8"';
@@ -2349,72 +2378,77 @@ function vaultPlanSheet(M){
     `Đổ móng huyệt bê tông đá 1×2 dày ${fmm(vt.lot+vt.aD+vt.rD)}, rộng hơn tường huyệt ${fmm(lo)} mỗi phía; ván khuôn tạo 2 hốc lồng nhau trên mặt móng: hốc đặt quách ${fmm(vt.rW)}×${fmm(vt.rL)} sâu ${fmm(vt.rD)}, giữa đáy hốc là hốc thông âm ${fmm(vt.aW)}×${fmm(vt.aL)} sâu ${fmm(vt.aD)}; dưới thông âm còn ${fmm(vt.lot)} bê tông.`,
     `Xây tường huyệt gạch đặc ${fmm(vt.wt)} trên mặt móng, cao ${fmm(vt.depth)}. Trát mặt trong chống thấm dày 15.`,
     `Làm móng và tường bao, tường hậu, móng trụ góc. Lấp đất quanh huyệt, tôn nền, đầm từng lớp 150 đến ${flv(zs)}.`,
-    'Đổ đế đỡ mộ BTCT bản rộng trên thành huyệt. Huyệt 1: hạ quách (tiểu bên trong) của Trịnh Minh Tùng vào hốc. Sau đó úp mộ đá lên đế đỡ, xây khung viền, rải sỏi, trồng cỏ ô.']});
+    `Đổ đế đỡ mộ BTCT bản rộng trên thành huyệt. Huyệt 1: hạ quách (tiểu bên trong) của Trịnh Minh Tùng vào hốc. Sau đó úp mộ đá lên đế đỡ, ${isSoi()?'xây khung viền, rải sỏi':'xây khung viền ốp đá, lát đá xanh đen mài'}, trồng cỏ ô.`]});
 }
 
 function vaultSheet(){
   const g=P.grave, vt=P.vault, lawn=zG(), ex=P.lv.exist;   // lawn ở đây = mặt đặt đế mộ
   const zs=lawn-vt.slab, zb=zs-vt.depth, zr=zb-vt.rD, za=zr-vt.aD, zl=za-vt.lot;
-  const iL=vt.inL/2, iW=vt.inW/2, oL=iL+vt.wt, oW=iW+vt.wt, gL=g.L/2, gW=g.W/2, tL=vt.tL/2, tW=vt.tW/2, sL=slabWL().L/2, sW=slabWL().W/2, mL=Math.max(gL,oL+0.05), mW=Math.max(gW,oW+0.05);
+  const iL=vt.inL/2, iW=vt.inW/2, oL=iL+vt.wt, oW=iW+vt.wt, gL=g.L/2, gW=g.W/2, tL=vt.tL/2, tW=vt.tW/2, sW=slabWL().W/2, sF=slabWL().F, sB=slabWL().B, mW=Math.max(gW,oW+0.05);
+  // gốc toạ độ = tim huyệt (= tim quách = tim ô cỏ); đế mộ lệch về phía chân dV: từ g1 tới g2
+  const dV=vOff(), g1=-gL-dV, g2=gL-dV, u1=Math.min(g1,-oL-0.05), u2=Math.max(g2,oL+0.05);
   const vMin=Math.min(zl,za)-0.06, vMax=lawn+g.H0+0.04;
   const BR='fill="url(#p-brick)" class="k2"', TIEU='fill="none" stroke="#2a6fb0" stroke-width=".3" stroke-dasharray="1.6 .8"';
   // ---------- MẶT BẰNG (u: dọc mộ, chân trái → đầu phải; v: ngang mộ)
   // mỗi hình tự chọn tỷ lệ lớn nhất (1:15, 1:20, 1:25, 1:30, 1:40) mà hình cộng chỗ ghi kích thước [trái, phải, trên, dưới] còn nằm gọn trong ô [x, y, rộng, cao]
   const pick=(wM,hM,box,mg)=>{ for(const d of [15,20,25,30,40]){ const s=1000/d; if(wM*s+mg[0]+mg[1]<=box[2] && hM*s+mg[2]+mg[3]<=box[3]) return d; } return 40; };
   const inner=(box,mg)=>[box[0]+mg[0],box[1]+mg[2],box[2]-mg[0]-mg[1],box[3]-mg[2]-mg[3]];
-  const PB=[15,12,165,119], PM=[6,22,6,21], dA=pick(2*mL,2*mW,PB,PM);
-  const a=View.fit(1000/dA,1,[-mL,-mW,mL,mW],inner(PB,PM));
-  a.rect(-mL,-mW,mL,mW,'fill="url(#p-fill)" stroke="none"');
+  const PB=[15,12,165,119], PM=[6,22,6,21], dA=pick(u2-u1,2*mW,PB,PM);
+  const a=View.fit(1000/dA,1,[u1,-mW,u2,mW],inner(PB,PM));
+  a.rect(u1,-mW,u2,mW,'fill="url(#p-fill)" stroke="none"');
   a.rect(-oL-0.05,-oW-0.05,oL+0.05,oW+0.05,'fill="none" class="k4 dash"');
   a.rect(-oL,-oW,oL,-iW,BR); a.rect(-oL,iW,oL,oW,BR); a.rect(-oL,-iW,-iL,iW,BR); a.rect(iL,-iW,oL,iW,BR);
   a.rect(-iL,-iW,iL,iW,'fill="#fff" class="k3"');
   a.rect(-vt.rL/2,-vt.rW/2,vt.rL/2,vt.rW/2,'fill="#f4f4f2" stroke="#333" stroke-width=".25"');
   a.rect(-vt.aL/2,-vt.aW/2,vt.aL/2,vt.aW/2,'fill="#fff" stroke="#333" stroke-width=".22" stroke-dasharray="1 .6"'); a.text(0,0,'THÔNG ÂM','class="lbl-s b halo"','middle',0,0.8);
   a.rect(-tL,-tW,tL,tW,TIEU); a.rect(-vt.qiL/2,-vt.qiW/2,vt.qiL/2,vt.qiW/2,TIEU); a.text(0,tW-0.035,'QUÁCH (tiểu nằm trong)','class="lbl-s b" style="fill:#2a6fb0"','middle',0,0.8);
-  a.rect(-gL,-gW,gL,gW,'fill="none" stroke="#444" stroke-width=".3" stroke-dasharray="3 1.2"');
-  a.line(-gL-0.06,0,gL+0.06,0,'class="k4 dashdot"'); a.line(0,-gW-0.06,0,gW+0.06,'class="k4 dashdot"');
-  a.text(gL,gW,'mép đế mộ (nét đứt)','class="lbl-s"','end',0,-1.2);
-  a.text(-gL,0,'chân','class="lbl-s"','start',1.2,-1.0); a.text(gL,0,'đầu','class="lbl-s"','end',-1.2,-1.0);
-  const ma=a.P(-gL-0.06,0); a.raw(`<text x="${N(ma[0]-1)}" y="${N(ma[1]-2)}" text-anchor="end" class="pt" style="font-size:3px">A</text>`);
+  a.rect(g1,-gW,g2,gW,'fill="none" stroke="#444" stroke-width=".3" stroke-dasharray="3 1.2"');
+  a.line(u1-0.06,0,u2+0.06,0,'class="k4 dashdot"'); a.line(0,-gW-0.06,0,gW+0.06,'class="k4 dashdot"');
+  a.text(g2,gW,'mép đế mộ (nét đứt)','class="lbl-s"','end',0,-1.2);
+  a.text(g1,0,'chân','class="lbl-s"','start',1.2,-1.0); a.text(g2,0,'đầu','class="lbl-s"','end',-1.2,-1.0);
+  const ma=a.P(u1-0.06,0); a.raw(`<text x="${N(ma[0]-1)}" y="${N(ma[1]-2)}" text-anchor="end" class="pt" style="font-size:3px">A</text>`);
   const mb=a.P(0,gW+0.06); a.raw(`<text x="${N(mb[0]+1.5)}" y="${N(mb[1]-0.8)}" class="pt" style="font-size:3px">B</text>`);
-  const aB=a.P(0,-mW)[1]; const aR=a.P(mL,0)[0];   // hàng kích thước tính từ mép ngoài cùng của hình (huyệt có thể rộng hơn đế mộ)
+  const aB=a.P(0,-mW)[1]; const aR=a.P(u2,0)[0];   // hàng kích thước tính từ mép ngoài cùng của hình (huyệt có thể rộng hơn đế mộ)
   [[-oL,-iL],[-iL,iL],[iL,oL]].forEach(([p,q])=>a.dimRowY(p,-gW,q,-gW,aB+5,fmm(q-p)));
   [[-vt.rL/2,-vt.aL/2],[-vt.aL/2,vt.aL/2],[vt.aL/2,vt.rL/2]].forEach(([p,q])=>a.dimRowY(p,vt.rW/2,q,vt.rW/2,a.P(0,vt.rW/2)[1]-2.5,fmm(q-p),{halo:true}));
-  a.dimRowY(-oL,-gW,oL,-gW,aB+10,'tường ngoài '+fmm(2*oL)); a.dimRowY(-gL,-gW,gL,-gW,aB+15,'đế mộ '+fmm(g.L));
-  [[-oW,-iW],[-iW,iW],[iW,oW]].forEach(([p,q])=>a.dimRowX(gL,p,gL,q,aR+5,fmm(q-p)));
-  a.dimRowX(gL,-oW,gL,oW,aR+10,fmm(2*oW)); a.dimRowX(gL,-gW,gL,gW,aR+15,fmm(g.W));
+  a.dimRowY(-oL,-gW,oL,-gW,aB+10,'tường ngoài '+fmm(2*oL)); a.dimRowY(g1,-gW,g2,-gW,aB+15,'đế mộ '+fmm(g.L)); if(dV>0.001) a.dimRowY(g1,gW,0,gW,a.P(0,mW)[1]-3,'chân mộ → tim ô cỏ = tim huyệt '+fmm(gL+dV),{halo:true});
+  [[-oW,-iW],[-iW,iW],[iW,oW]].forEach(([p,q])=>a.dimRowX(u2,p,u2,q,aR+5,fmm(q-p)));
+  a.dimRowX(u2,-oW,u2,oW,aR+10,fmm(2*oW)); a.dimRowX(u2,-gW,u2,gW,aR+15,fmm(g.W));
   // ---------- MẶT CẮT A-A (dọc mộ)
-  const sec=(v,o,i,gh,t,split,r,aa,sh,ti,op)=>{ const ex2=Math.max(gh,sh);
-    v.rect(-ex2-0.05,vMin,ex2+0.05,ex,'fill="url(#p-earth)"'); v.rect(-ex2-0.05,ex,ex2+0.05,zs,'fill="url(#p-fill)"');
-    v.rect(-gh-0.05,zs,-gh,lawn,'fill="url(#p-fill)"'); v.rect(gh,zs,gh+0.05,lawn,'fill="url(#p-fill)"');
-    v.rect(-gh-0.05,lawn-0.03,-gh,lawn+0.03,'fill="url(#p-peb)" class="k4"'); v.rect(gh,lawn-0.03,gh+0.05,lawn+0.03,'fill="url(#p-peb)" class="k4"');
-    v.line(-gh-0.05,ex,gh+0.05,ex,'class="k4 dash"');
+  const sec=(v,o,i,ga,gb,t,split,r,aa,sa,sb,ti,op)=>{ const e1=Math.min(ga,sa)-0.05, e2=Math.max(gb,sb)+0.05;
+    v.rect(e1,vMin,e2,ex,'fill="url(#p-earth)"'); v.rect(e1,ex,e2,zs,'fill="url(#p-fill)"');
+    v.rect(ga-0.05,zs,ga,lawn,'fill="url(#p-fill)"'); v.rect(gb,zs,gb+0.05,lawn,'fill="url(#p-fill)"');
+    if(isSoi()){ v.rect(ga-0.05,lawn-0.03,ga,lawn+0.03,'fill="url(#p-peb)" class="k4"'); v.rect(gb,lawn-0.03,gb+0.05,lawn+0.03,'fill="url(#p-peb)" class="k4"'); } else { v.rect(ga-0.05,lawn-0.03,ga,lawn,DAX); v.rect(gb,lawn-0.03,gb+0.05,lawn,DAX); }
+    v.line(e1,ex,e2,ex,'class="k4 dash"');
     v.rect(-o,zb,-i,zs,BR); v.rect(i,zb,o,zs,BR);
     v.rect(-i,zb,i,zs,'fill="#fff" class="k3"'); vaultBase2D(v,0,o,r,aa,zb,true);
     v.line(-i+0.015,zb,-i+0.015,zs,'stroke="#2a6fb0" stroke-width=".18"'); v.line(i-0.015,zb,i-0.015,zs,'stroke="#2a6fb0" stroke-width=".18"');
     quach2D(v,0,2*t,ti,zr);
-    v.rect(-sh,zs,-op,lawn,'fill="url(#p-conccut)" class="k2"'); v.rect(op,zs,sh,lawn,'fill="url(#p-conccut)" class="k2"');   // đế đỡ mộ
-    v.rect(-gh,lawn,-op,lawn+g.H0,'fill="url(#p-grancut)" class="k2"'); v.rect(op,lawn,gh,lawn+g.H0,'fill="url(#p-grancut)" class="k2"');   // đế mộ rỗng lòng
+    v.rect(sa,zs,-op,lawn,'fill="url(#p-conccut)" class="k2"'); v.rect(op,zs,sb,lawn,'fill="url(#p-conccut)" class="k2"');   // đế đỡ mộ
+    v.rect(ga,lawn,-op,lawn+g.H0,'fill="url(#p-grancut)" class="k2"'); v.rect(op,lawn,gb,lawn+g.H0,'fill="url(#p-grancut)" class="k2"');   // đế mộ rỗng lòng
     v.text(0,lawn+g.H0/2,'LÒNG MỘ (đế mộ đá rỗng, thông thiên)','class="lbl-s b halo"','middle',0,0.75);
-    const yB=v.P(0,Math.min(zl,za))[1], xL=v.P(-gh-0.05,0)[0], xR=v.P(gh+0.05,0)[0];
+    const yB=v.P(0,Math.min(zl,za))[1], xL=v.P(e1,0)[0], same=Math.abs(sa+o)<1e-4 && Math.abs(sb-o)<1e-4;
     [[-o,-i],[-i,-r],[-r,-aa],[-aa,aa],[aa,r],[r,i],[i,o]].forEach(([p,q])=>v.dimRowY(p,zl,q,zl,yB+5,fmm(q-p)));
-    v.dimRowY(-sh,zl,sh,zl,yB+10,'ngoài thành huyệt = ngoài đế đỡ '+fmm(2*sh)); v.dimRowY(-op,zs,op,zs,v.P(0,lawn+g.H0)[1]-6,'miệng huyệt '+fmm(2*op)); v.dimRowY(-gh,zs,gh,zs,v.P(0,lawn+g.H0)[1]-11,'đế mộ '+fmm(2*gh));
-    [[zl,za],[za,zr],[zr,zb],[zb,zs],[zs,lawn],[lawn,lawn+g.H0]].filter(([p,q])=>q-p>0.004).forEach(([p,q])=>v.dimRowX(-gh-0.05,p,-gh-0.05,q,xL-5,fmm(q-p)));
-    v.level(gh+0.05,lawn,flv(lawn)+' '+zGName(),1,5); v.level(gh+0.05,zs,flv(zs)+' đỉnh tường gạch',1,5);
-    v.level(gh+0.05,zb,flv(zb)+' cấp 1: đáy lòng huyệt',1,5); v.level(gh+0.05,zr,flv(zr)+' cấp 2: đáy hốc quách',1,5); v.level(gh+0.05,za,flv(za)+' cấp 3: đáy thông âm',1,5); v.level(gh+0.05,zl,flv(zl)+' đáy móng',1,5);
+    const yT=v.P(0,lawn+g.H0)[1];
+    v.dimRowY(-o,zl,o,zl,yB+10,(same?'ngoài thành huyệt = ngoài đế đỡ ':'ngoài thành huyệt ')+fmm(2*o)); v.dimRowY(-op,zs,op,zs,yT-6,'miệng huyệt '+fmm(2*op)); v.dimRowY(ga,zs,gb,zs,yT-11,'đế mộ '+fmm(gb-ga));
+    if(!same) v.dimRowY(sa,zs,sb,zs,yT-16,'đế đỡ '+fmm(sb-sa));
+    if(split && Math.abs(ga+gb)>0.002) v.line(0,zl-0.03,0,lawn+g.H0+0.03,'class="k4 dashdot"');
+    [[zl,za],[za,zr],[zr,zb],[zb,zs],[zs,lawn],[lawn,lawn+g.H0]].filter(([p,q])=>q-p>0.004).forEach(([p,q])=>v.dimRowX(e1,p,e1,q,xL-5,fmm(q-p)));
+    v.level(e2,lawn,flv(lawn)+' '+zGName(),1,5); v.level(e2,zs,flv(zs)+' đỉnh tường gạch',1,5);
+    v.level(e2,zb,flv(zb)+' cấp 1: đáy lòng huyệt',1,5); v.level(e2,zr,flv(zr)+' cấp 2: đáy hốc quách',1,5); v.level(e2,za,flv(za)+' cấp 3: đáy thông âm',1,5); v.level(e2,zl,flv(zl)+' đáy móng',1,5);
   };
   // 2 mặt cắt: chừa trái cho chuỗi cao độ, phải cho nhãn cao độ, trên/dưới cho hàng kích thước
-  const SM=[10,40,14,14], hSec=vMax-vMin, xB=Math.max(gL,sL)+0.05, xC=Math.max(gW,sW)+0.05, BBx=[188,12,157,128], CBx=[15,143,165,131];
-  const dB=pick(2*xB,hSec,BBx,SM), dC=pick(2*xC,hSec,CBx,SM);
-  const b=View.fit(1000/dB,1,[-xB,vMin,xB,vMax],inner(BBx,SM)); sec(b,oL,iL,gL,tL,true,vt.rL/2,vt.aL/2,sL,vt.qiL,openWL().L/2);
-  const c=View.fit(1000/dC,1,[-xC,vMin,xC,vMax],inner(CBx,SM)); sec(c,oW,iW,gW,tW,false,vt.rW/2,vt.aW/2,sW,vt.qiW,openWL().W/2);
+  const SM=[10,40,14,14], SMB=[10,40,19,14], hSec=vMax-vMin, xB1=Math.min(g1,-sF,-oL)-0.05, xB2=Math.max(g2,sB,oL)+0.05, xC=Math.max(gW,sW)+0.05, BBx=[188,12,157,128], CBx=[15,143,165,131];
+  const dB=pick(xB2-xB1,hSec,BBx,SMB), dC=pick(2*xC,hSec,CBx,SM);
+  const b=View.fit(1000/dB,1,[xB1,vMin,xB2,vMax],inner(BBx,SMB)); sec(b,oL,iL,g1,g2,tL,true,vt.rL/2,vt.aL/2,-sF,sB,vt.qiL,openWL().L/2);
+  const c=View.fit(1000/dC,1,[-xC,vMin,xC,vMax],inner(CBx,SM)); sec(c,oW,iW,-gW,gW,tW,false,vt.rW/2,vt.aW/2,-sW,sW,vt.qiW,openWL().W/2);
   let extra=titleAt(95,137,'MẶT BẰNG HUYỆT (cắt dưới đế đỡ mộ)','TL 1:'+dA)+titleAt(266,146,'MẶT CẮT A-A (dọc theo mộ)','TL 1:'+dB)+`<text x="95" y="280" text-anchor="middle" class="ttl" style="font-size:4.2px">MẶT CẮT B-B (ngang mộ) · TL 1:${dC}</text>`;
   const kg=Math.round(slabWL().W*slabWL().L/2*vt.slab*2500);
   const notes=[
-    `Lòng huyệt ${fmm(vt.inW)} × ${fmm(vt.inL)}, sâu ${fmm(vt.depth)} (tính đến mặt trát). Mỗi mộ một huyệt, tim huyệt trùng tim mộ.`,
+    `Lòng huyệt ${fmm(vt.inW)} × ${fmm(vt.inL)}, sâu ${fmm(vt.depth)} (tính đến mặt trát). Mỗi mộ một huyệt; tim huyệt, tim quách trùng tim ô cỏ${dV>0.001?`, lùi về phía bia ${fmm(dV)} so với tim đế mộ (ô cỏ nằm giữa nắp, nắp lùi về phía bia)`:''}.`,
     `Tường huyệt gạch đặc dày ${fmm(vt.wt)}, vữa xi măng mác 75. Mặt trong trát vữa chống thấm dày 15 (nét xanh).`,
     `Móng huyệt BTCT dày ${fmm(vt.rD+vt.aD+vt.lot)}, tường huyệt xây trên móng. Mặt móng là cấp 1 (đáy lòng huyệt); cấp 2 hốc đặt quách ${fmm(vt.rW)} × ${fmm(vt.rL)}, sâu ${fmm(vt.rD)}; cấp 3 hốc thông âm ${fmm(vt.aW)} × ${fmm(vt.aL)} ngay dưới quách, sâu ${fmm(vt.aD)}; dưới thông âm còn ${fmm(vt.lot)} bê tông móng.`,
-    `Không làm nắp huyệt. Trên thành huyệt đổ đế đỡ mộ BTCT dày ${fmm(vt.slab)}, ngoài ${fmm(slabWL().W)} × ${fmm(slabWL().L)}, bản rộng ${fmm(vt.bL)} ở hai đầu và ${fmm(vt.bW)} ở hai bên, chìa vào trong thành miệng huyệt ${fmm(openWL().W)} × ${fmm(openWL().L)}. Đế mộ đá ${fmm(g.W)} × ${fmm(g.L)} úp lên, tì ${fmm((g.L-openWL().L)/2)} / ${fmm((g.W-openWL().W)/2)} mỗi phía. Khay ô cỏ có lỗ thông thiên Ø${fmm(TT_D)}.`,
+    `Không làm nắp huyệt. Trên thành huyệt đổ đế đỡ mộ BTCT dày ${fmm(vt.slab)}, ngoài ${fmm(slabWL().W)} × ${fmm(slabWL().L)}, bản rộng ${fmm(slabBand().F)} phía chân, ${fmm(slabBand().B)} phía bia và ${fmm(vt.bW)} ở hai bên, chìa vào trong thành miệng huyệt ${fmm(openWL().W)} × ${fmm(openWL().L)}${sF-oL>0.001?`; phía chân đế đỡ chìa ra ngoài thành huyệt ${fmm(sF-oL)} để đỡ trọn đế mộ`:''}. Đế mộ đá ${fmm(g.W)} × ${fmm(g.L)} úp lên, tì ${fmm(gL+dV-openWL().L/2)} phía chân / ${fmm(gL-dV-openWL().L/2)} phía bia / ${fmm((g.W-openWL().W)/2)} hai bên. Khay ô cỏ có lỗ thông thiên Ø${fmm(TT_D)}.`,
     `Quách gỗ (nét đứt xanh) phủ bì ${fmm(vt.tL)} × ${fmm(vt.tW)} × ${fmm(vt.tH)}, lọt lòng ${fmm(vt.qiL)} × ${fmm(vt.qiW)} × ${fmm(vt.qiH)}; tiểu nằm trong quách. Đo quách thực tế trước khi đổ móng; hốc đặt quách dư ${fmm((vt.rL-vt.tL)/2)}–${fmm((vt.rW-vt.tW)/2)} mỗi phía, trên nắp quách còn hở ${fmm(vt.depth-vt.tH+vt.rD)} tới đỉnh tường.`,
     'Huyệt 2 mộ sinh phần: xây sẵn, úp mộ đá lên đế đỡ. Khi cần đặt hũ tro: nhấc mộ đá ra, đặt xong úp lại.',
     'Huyệt mộ Trịnh Minh Tùng: hạ quách vào hốc sau khi xây xong huyệt và đế đỡ mộ, rồi úp mộ đá lên.',
@@ -2464,7 +2498,7 @@ function estimate(M){
   rows.push(['B','Trát mạ xi măng mặt sau tường hậu','trát vữa dày 15, mạ xi măng, từ mặt lối đi tới mép mái',backA+W*lawn,'m²',[0.18,0.3]]);
   if(isRender()){ const encFin=2*enclA+(Le-gW)*e.t+Le*lawn; rows.push(['B','Trát vữa, mạ xi măng tường bao','trát 2 mặt, gờ đỉnh, gờ chân, khung chỉ nổi quanh ô lan hoa, mạ xi măng',encFin,'m²',[0.22,0.38]]);
     if(postOn()) rows.push(['B','Trụ góc tường bao',`trụ ${fcm(P.encl.postW)} × ${fcm(P.encl.postW)} cm, cao hơn tường ${fcm(P.encl.postH)} cm, mũ trụ chóp vát, trát mạ xi măng`,postRects(M.R,M.L).length,'trụ',[0.8,1.5]]); }
-  rows.push(['B','Hoàn thiện gạch trần',isRender()?'mặt trong tường hậu, khung viền bục mộ, tam cấp: miết mạch lõm, vệ sinh, quét chống rêu':'miết mạch lõm, vệ sinh, quét chống rêu mốc gốc nước; mặt ngoài phần chắn đất ốp gạch thẻ',isRender()?backA+WS.len*P.wall.t:finA-backA,'m²',[0.2,0.35]]);
+  rows.push(['B','Hoàn thiện gạch trần',isRender()?'mặt trong tường hậu, tam cấp: miết mạch lõm, vệ sinh, quét chống rêu':'miết mạch lõm, vệ sinh, quét chống rêu mốc gốc nước; mặt ngoài phần chắn đất ốp gạch thẻ',isRender()?backA+WS.len*P.wall.t:finA-backA,'m²',[0.2,0.35]]);
   { const LA=latAll(R,L); if(LA.n) rows.push(['B','Ô hoa văn đất nung',`gạch hoa văn chữ Thọ ${fcm(P.encl.latS)} × ${fcm(P.encl.latS)} cm, chèn trên tường lửng`,LA.n,'ô',[0.06,0.12]]); }
   if(L.gates.length) rows.push(['B','Tam cấp, ngưỡng lối vào',`${L.gates[0].step.n} bậc cao ${fcm(L.gates[0].step.rz)} cm, rộng ${fm(e.gateW)} m; xây gạch trần, mặt bậc lát gạch nung, mũi bậc gạch nghiêng`,L.gates.length,'bộ',[1.2,2.5]]);
   if(L.lu && L.lu.type==='hoa') rows.push(['C','Lư hóa mã đá xanh',`Ø${fm(L.lu.d)} m, cao ${fm(L.lu.H)} m, tạc theo mẫu (3 chân, quai mây, nắp nghê); kèm bệ gạch ${fm(L.lu.s)} × ${fm(L.lu.s)} m xây trên mặt sân, không làm móng`,1,'bộ',[8,18]]);
@@ -2476,8 +2510,10 @@ function estimate(M){
     ['C',`Mộ ${grName()} ${fcm(P.grave.W)} × ${fcm(P.grave.L)}`,isDX()?'trọn bộ: đá xanh vân mây mài mờ, bia bo góc chỉ vàng, ô cỏ to (giá theo báo giá đá xanh đã nghe)':'trọn bộ: bia bo góc chỉ vàng, ô cỏ to',3,'ngôi',isDX()?[8,16]:[15,30]],
 
     P.bia.photo==='yes' ? ['C','Ảnh sứ, khắc chữ','bia mộ Trịnh Minh Tùng, chữ mạ vàng',1,'bia',[1,3]] : ['C','Khắc chữ mạ vàng','bia mộ Trịnh Minh Tùng, không gắn ảnh',1,'bia',[0.6,1.5]],
-    ['B','Khung viền bục mộ xây gạch',`gạch trần dày ${fcm(f.w)} cm quanh cụm mộ, kiêm thành bục`,frameLen,'m dài',[0.25,0.45]],
-    ['C','Sỏi trắng','dày 5 cm, có vải địa kỹ thuật',pebA,'m²',[0.15,0.3]],
+    ...(isSoi()?[['B','Khung viền bục mộ xây gạch',`gạch trần dày ${fcm(f.w)} cm quanh cụm mộ, kiêm thành bục`,frameLen,'m dài',[0.25,0.45]],
+      ['C','Nền quanh mộ: sỏi trắng','dày 5 cm, có vải địa kỹ thuật',pebA,'m²',[0.15,0.3]]]
+    :[['B','Khung viền bục mộ xây gạch, ốp đá xanh đen mài',`gạch dày ${fcm(f.w)} cm quanh cụm mộ, kiêm thành bục; ốp đá xanh đen mài mặt trên dày 3 cm, mặt ngoài dày 2 cm`,frameLen,'m dài',[0.55,0.9]],
+      ['C','Nền quanh mộ: lát đá xanh đen mài','đá xanh đen mài 300×150 dày 3 cm xếp so le, mạch vữa sáng màu; vữa lót 2 cm, bê tông lót 5 cm',pebA,'m²',[0.6,0.9]]]),
     ...(isVT()?[['D','Cây vạn tuế','thân thấp, tán khoảng 1,4 m; đất trồng, công trồng',2,'cây',[1,3]],
       ['D','Chậu vuông thuôn màu trắng',`miệng ${fcm(VT_POT.top)} cm, đáy ${fcm(VT_POT.bot)} cm, cao ${fcm(VT_POT.h)} cm; composite hoặc gốm men`,2,'chậu',[0.6,1.5]]]
     :[['D','Trúc cảnh','cây, đất trồng, công trồng',nB,'cây',[0.2,0.45]],
@@ -2539,7 +2575,7 @@ function tdTasks(M){
   add('pad','fin','Đổ bê tông lót sân, rải cát đệm',{qty:`${f2(q('Bê tông lót, cát đệm sân'),1)} m²`,crew:3,dur:1,deps:[['frame',0]]});
   add('pave','fin','Lát sân gạch nung xương cá, chít mạch',{qty:`${f2(q('Lát sân'),1)} m²`,rate:'3 m²/công',crew:2,dur:dur(q('Lát sân'),3,2),deps:[['pad',1]]});
   add('set3','fin','Chở và lắp 3 mộ đá lên đế đỡ',{qty:'3 ngôi',crew:4,dur:1,deps:[['stone',0],['cure2',0],['reinter',0],['frame',0]],note:'Xưởng cử người lắp, có cẩu tay hoặc tó.'});
-  add('peb','fin','Trải vải địa, sỏi trắng quanh mộ',{qty:`${f2(q('Sỏi trắng'),1)} m²`,crew:2,dur:1,deps:[['set3',0]]});
+  add('peb','fin',isSoi()?'Trải vải địa, sỏi trắng quanh mộ':'Đổ bê tông lót, lát đá xanh đen mài quanh mộ, ốp đá khung viền',{qty:isSoi()?`${f2(q('Nền quanh mộ'),1)} m²`:`${f2(q('Nền quanh mộ'),1)} m² + ${f2(q('Khung viền bục mộ'),1)} m dài`,crew:2,dur:isSoi()?1:3,deps:[['set3',0]]});
   if(luH){ add('lubase','fin','Xây bệ lư, lát mặt bệ',{crew:2,dur:1,deps:[['pave',0]]});
     add('luset','fin','Đặt lư hóa mã lên bệ',{crew:3,dur:1,deps:[['lu',0],['lubase',0]]}); }
   if(luA){ add('lubase','fin','Xây bệ bàn hương án trên bê tông lót dày 100, lát mặt bệ',{crew:2,dur:1,deps:[['pad',1]]});
@@ -2672,7 +2708,7 @@ function infoHTML(M){
       :`<tr><td>Bồn trúc</td><td class="num">${rng2(L.ix0,L.ix1)}</td><td class="num">${rng2(L.ybb,L.ywf)}</td></tr>`}
     <tr><td>Khung viền mộ ${sub('mép ngoài')}</td><td class="num">${rng2(L.gx1,L.gx2)}</td><td class="num">${rng2(L.yFF,L.yFB)}</td></tr>
     ${L.graves.map(gr=>`<tr><td>${WHO[gr.who][2]} ${sub('đế mộ · tim x = '+fm(gr.xc))}</td><td class="num">${rng2(gr.x1,gr.x2)}</td><td class="num">${rng2(L.yGF,L.yGB)}</td></tr>`).join('')}
-    <tr><td>Lòng huyệt ${sub('mỗi mộ, tim trùng tim mộ')}</td><td class="num">tim ± ${fm(P.vault.inW/2)}</td><td class="num">${rng2((L.yGF+L.yGB)/2-P.vault.inL/2,(L.yGF+L.yGB)/2+P.vault.inL/2)}</td></tr>
+    <tr><td>Lòng huyệt ${sub('mỗi mộ, tim trùng tim ô cỏ (tim quách)')}</td><td class="num">tim ± ${fm(P.vault.inW/2)}</td><td class="num">${rng2(L.hc-P.vault.inL/2,L.hc+P.vault.inL/2)}</td></tr>
     </table><p>Sân cỏ trước mộ rộng ${fm(L.front)} m. Kiểm tra khung vuông: hai đường chéo của khung phải bằng nhau, mỗi đường ${fm(Math.hypot(R.W,R.H))} m.</p></section>`;
   // ---- Đỉnh tường hậu dáng núi
   if(isNui()){ const A=wallPts(R.W), lv=P.lv.lawn, lbCell=h=>{ const r=lb(Math.round(h*100)); return `<td class="${r.ok?'ok':'bad'}">${r.ok?'✓':'✗'} ${r.name}</td>`; };
@@ -2832,7 +2868,15 @@ function texSet(T){ const R=rng(5);
   const tho=ctex(T,128,128,(x,w,h)=>{ x.fillStyle='#3f7a3c'; x.fillRect(0,0,w,h); x.strokeStyle='#a9d29f'; x.lineWidth=5; x.beginPath(); x.arc(64,64,46,0,7); x.stroke(); x.beginPath(); x.arc(64,64,26,0,7); x.stroke();
     x.fillStyle='#a9d29f'; x.fillRect(30,59,68,10); x.fillRect(59,30,10,68); for(const [dx,dy] of [[-1,-1],[1,-1],[-1,1],[1,1]]) x.fillRect(64+dx*32-5,64+dy*32-5,10,10); });
   tile.wrapS=tile.wrapT=T.RepeatWrapping;
-  return {grass,peb,conc,soil,lang,brick,lat,pave,tile,tho};
+  // đá xanh đen mài: 2 viên × 2 hàng = 0,60 × 0,30 m, viên 300 × 150 xếp so le, mạch vữa sáng mảnh, vân trắng mờ
+  const dax=ctex(T,512,256,(x,w,h)=>{ x.fillStyle='#b9b5ac'; x.fillRect(0,0,w,h); const bw=w/2, bh=h/2, m=4;
+    for(let r=0;r<2;r++){ const off=r*bw/2; for(let i=-1;i<3;i++){ const l=15+R()*6, s=5+R()*5, x0=i*bw+off+m/2, y0=r*bh+m/2, ww=bw-m, hh=bh-m;
+      x.fillStyle=`hsl(${200+R()*12},${s}%,${l}%)`; x.fillRect(x0,y0,ww,hh);
+      for(let k=0;k<220;k++){ x.fillStyle=`rgba(${R()>0.5?'200,210,215':'0,0,0'},.08)`; const rr=1+R()*3; x.fillRect(x0+R()*ww,y0+R()*hh,rr,rr); }
+      x.save(); x.beginPath(); x.rect(x0,y0,ww,hh); x.clip(); x.strokeStyle='rgba(190,198,204,.35)'; x.lineWidth=1;
+      for(let k=0;k<3;k++){ const ax=x0+R()*ww, ay=y0+R()*hh, a=R()*Math.PI, L2=30+R()*90; x.beginPath(); x.moveTo(ax,ay); x.lineTo(ax+Math.cos(a)*L2,ay+Math.sin(a)*L2); x.stroke(); }
+      x.restore(); } } });
+  return {grass,peb,dax,conc,soil,lang,brick,lat,pave,tile,tho};
 }
 function rrPath(p,w,h,r,ox,oy){ const x0=ox-w/2, x1=ox+w/2, y0=oy, y1=oy+h; r=Math.max(0.001,Math.min(r,w/2,h));
   p.moveTo(x0,y0); p.lineTo(x1,y0); p.lineTo(x1,y1-r); p.absarc(x1-r,y1-r,r,0,Math.PI/2,false); p.lineTo(x0+r,y1); p.absarc(x0+r,y1-r,r,Math.PI/2,Math.PI,false); p.lineTo(x0,y0); return p; }
@@ -2870,7 +2914,7 @@ function build3D(){
   if(V3.group){ V3.scene.remove(V3.group);
     V3.group.traverse(o=>{ if(o.geometry) o.geometry.dispose(); (Array.isArray(o.material)?o.material:[o.material]).forEach(m=>{ if(m){ if(m.map) m.map.dispose(); m.dispose(); } }); }); }
   clearPick3D(); { const s=$('#t-alt'); if(s) s.value=P.bamboo.type; const s2=$('#t-lu'); if(s2) s2.value=P.lu.type; }
-  // G: toàn bộ; A: phần nổi bị ẩn khi xem phần ngầm (mộ, khung viền, sỏi, trúc); U: phần ngầm; N: tên mộ
+  // G: toàn bộ; A: phần nổi bị ẩn khi xem phần ngầm (mộ, khung viền, đá lát, trúc); U: phần ngầm; N: tên mộ
   const G=new T.Group(), U=new T.Group(), N=new T.Group(), A=new T.Group(); G.add(U); G.add(N); G.add(A);
   V3.group=G; V3.under=U; V3.names=N; V3.above=A; V3.fade=[]; V3.fadeW=[]; V3.pick=[]; V3.scene.add(G);
   const rep=(t,a,b)=>{ const c=t.clone(); c.needsUpdate=true; c.repeat.set(Math.max(0.05,a),Math.max(0.05,b)); return c; };
@@ -3018,16 +3062,16 @@ function build3D(){
       ['Ngói diềm','lá đề treo dưới mép mái, giữa các ống'],['Ống nóc',`Ø${fmm(2*NG.rR)} chạy theo đường cong nóc, lõi vữa`],['Dưới ống','ngói lòng máng men xanh, kê gạch vữa trên đỉnh tường']]),...parts);
     tag(I('Mái ngói đỉnh tường hậu',[['Kiểu','một mái dốc vào trong khu mộ, chạy theo đường đỉnh tường dáng núi'],['Độ dốc',`${P.wall.rSlope}°`],['Nóc mái',`cao hơn đỉnh tường ${fmm(RG.back)}, chìa ra sau ${fmm(RG.ovB)}`],
       ['Mái vươn vào trong',`${fmm(RG.ov)} qua mặt trong tường, mép mái thấp hơn đỉnh tường ${fmm(-RG.front)}`],['Vật liệu','ngói ống men xanh, đầu ngói chữ Thọ, ngói diềm lá đề, ống nóc; kê gạch vữa trên đỉnh tường; '+dripTxt()],['Dài theo đỉnh tường',`${fm(acc)} m`]]),roof,kk); }
-  // khung viền granite + sỏi trắng
-  const zg=zG(), fz1=lawn-0.02, fz2=zg+f.up, frameLen=2*((L.gx2-L.gx1)+(L.yFB-L.yFF));
-  const mFr=(w)=>conc(w,fz2-fz1);
-  tag(I('Khung viền bục mộ (gạch)',[['Kích thước ngoài',`${fm(L.gx2-L.gx1)} × ${fm(L.yFB-L.yFF)} m`],['Dày',fmm(f.w)],['Cao',`${fmm(zg-lawn)} bục + ${fmm(f.up)} nổi trên mặt sỏi, đỉnh ${flv(fz2)}`],['Vật liệu','gạch trần không trát, mặt trên gạch nằm'],['Tổng chiều dài',`${fm(frameLen)} m`]]),
+  // khung viền + nền quanh mộ (đá xanh đen mài hoặc sỏi trắng)
+  const zg=zG(), fz1=lawn-0.02, fz2=zg+frUp(), frameLen=2*((L.gx2-L.gx1)+(L.yFB-L.yFF));
+  const mFr=(w)=>{ if(isSoi()) return conc(w,fz2-fz1); const m=std({map:rep(TX.dax,w/0.6,(fz2-fz1)/0.3), roughness:0.45}); V3.fadeW.push(m); return m; };
+  tag(I(isSoi()?'Khung viền bục mộ (gạch)':'Khung viền bục mộ (gạch, ốp đá xanh đen mài)',[['Kích thước ngoài',`${fm(L.gx2-L.gx1)} × ${fm(L.yFB-L.yFF)} m`],['Dày',fmm(f.w)],['Cao',`${fmm(zg-lawn)} bục${isSoi()?` + ${fmm(frUp())} nổi trên mặt sỏi`:', mặt trên phẳng bằng mặt đá lát'}, đỉnh ${flv(fz2)}`],['Vật liệu',isSoi()?'gạch trần không trát, mặt trên gạch nằm':'xây gạch, ốp đá xanh đen mài mặt trên dày 30 và mặt ngoài dày 20'],['Tổng chiều dài',`${fm(frameLen)} m`]]),
     BA(L.gx1,L.gx2,L.yFF,L.yFF+f.w,fz1,fz2,mFr(L.gx2-L.gx1)), BA(L.gx1,L.gx2,L.yFB-f.w,L.yFB,fz1,fz2,mFr(L.gx2-L.gx1)),
     BA(L.gx1,L.gx1+f.w,L.yFF+f.w,L.yFB-f.w,fz1,fz2,mFr(L.yFB-L.yFF)), BA(L.gx2-f.w,L.gx2,L.yFF+f.w,L.yFB-f.w,fz1,fz2,mFr(L.yFB-L.yFF)));
   const pw=L.gx2-L.gx1-2*f.w, pd=L.yFB-L.yFF-2*f.w;
-  tag(I('Sỏi trắng quanh mộ',[['Kích thước trong khung',`${fm(pw)} × ${fm(pd)} m`],['Dày','50, trên vải địa kỹ thuật'],
-    ['Dải sỏi',`trước ${fmm(f.pebFront)}, sau ${fmm(f.pebBack)}, hai đầu ${fmm(f.pebSide)}`],['Khe giữa 2 mộ',fmm(f.gap)]]),
-    BA(L.gx1+f.w,L.gx2-f.w,L.yFF+f.w,L.yFB-f.w,Math.max(lawn-0.02,zg-0.05),zg+0.01,std({map:rep(TX.peb,pw*3.2,pd*3.2), roughness:0.85}),false));
+  tag(I(nenName(),[['Kích thước trong khung',`${fm(pw)} × ${fm(pd)} m`],...(isSoi()?[['Dày','50, trên vải địa kỹ thuật']]:[['Viên đá','300 × 150 dày 30, xếp so le, mạch vữa sáng màu 5'],['Lớp dưới','vữa lót 20, bê tông lót 50 trên đất đầm']]),
+    ['Dải nền',`trước ${fmm(f.pebFront)}, sau ${fmm(f.pebBack)}, hai đầu ${fmm(f.pebSide)}`],['Khe giữa 2 mộ',fmm(f.gap)]]),
+    BA(L.gx1+f.w,L.gx2-f.w,L.yFF+f.w,L.yFB-f.w,Math.max(lawn-0.02,zg-0.05),zg+0.01,isSoi()?std({map:rep(TX.peb,pw*3.2,pd*3.2), roughness:0.85}):std({map:rep(TX.dax,pw/0.6,pd/0.3), roughness:0.45}),false));
   if(zg>lawn+0.06) BA(L.gx1+f.w,L.gx2-f.w,L.yFF+f.w,L.yFB-f.w,lawn-0.02,zg-0.05,mSoil,false);   // đất đầm trong bục mộ
   // ba ngôi mộ
   const mCell=std({map:rep(TX.grass,1.1,1.5), roughness:1});
@@ -3259,8 +3303,8 @@ ${fmm(P.grave.rE)}; cạnh chân và chỗ áp bia vuông`],pos,['Thứ tự',`m
       ['Đỉnh huyệt',`đế đỡ mộ BTCT dày ${fmm(vt.slab)}, miệng ${fmm(openWL().W)} × ${fmm(openWL().L)}; mộ đá úp thẳng lên, không làm nắp; thông thiên qua ô cỏ`],
       ['Tim huyệt',`cách cạnh AB ${fm(xc-R.x0)} m, cách mép khung trước ${fm(hc-R.y0)} m`],['Dùng cho',gr.who==='anh'?'đặt quách chứa tiểu (cải táng)':'chờ đặt hũ tro']]),
       XU(xc-oW,xc+oW,hc-oL,hc+oL,[xc-iW,xc+iW,hc-iL,hc+iL],zh+eps,zs,mGach));
-    { const SWL=slabWL(), z2_=zG()-0.001, iL=openWL().L/2, iW=openWL().W/2; tagL('de',I('Đế đỡ mộ',[['Dày',`${fmm(vt.slab)}, BTCT`],['Ngoài',`${fmm(SWL.W)} × ${fmm(SWL.L)}`],['Miệng huyệt',`${fmm(2*iW)} × ${fmm(2*iL)}; bản rộng ${fmm(vt.bL)} (đầu) / ${fmm(vt.bW)} (bên)`],['Công dụng','đỡ mộ đá úp lên; lòng để trống, thông thiên']]),
-      XU(xc-SWL.W/2,xc+SWL.W/2,hc-SWL.L/2,hc+SWL.L/2,[xc-iW,xc+iW,hc-iL,hc+iL],zs+eps,z2_,mBT)); }
+    { const SWL=slabWL(), z2_=zG()-0.001, iL=openWL().L/2, iW=openWL().W/2; tagL('de',I('Đế đỡ mộ',[['Dày',`${fmm(vt.slab)}, BTCT`],['Ngoài',`${fmm(SWL.W)} × ${fmm(SWL.L)}`],['Miệng huyệt',`${fmm(2*iW)} × ${fmm(2*iL)}; bản rộng ${fmm(slabBand().F)} (phía chân) / ${fmm(slabBand().B)} (phía bia) / ${fmm(vt.bW)} (bên)`],['Công dụng','đỡ mộ đá úp lên; lòng để trống, thông thiên']]),
+      XU(xc-SWL.W/2,xc+SWL.W/2,hc-SWL.F,hc+SWL.B,[xc-iW,xc+iW,hc-iL,hc+iL],zs+eps,z2_,mBT)); }
     if(gr.who==='anh') tagL('quach',I('Quách gỗ (tiểu nằm trong)',[['Phủ bì',`${fmm(vt.tL)} × ${fmm(vt.tW)} × cao ${fmm(vt.tH)}`],['Lọt lòng',`${fmm(vt.qiL)} × ${fmm(vt.qiW)} × cao ${fmm(vt.qiH)}`],['Đặt trong',`hốc ${fmm(vt.rL)} × ${fmm(vt.rW)}, đáy ${flv(zr)}`],['Lưu ý','đo quách thực tế trước khi đổ móng huyệt']]),
       BU(xc-vt.tW/2,xc+vt.tW/2,hc-vt.tL/2,hc+vt.tL/2,zr+eps,zr+vt.tH,mQ)); });
   // móng trụ góc (M3) + lõi trụ BTCT 150 × 150
@@ -3407,7 +3451,7 @@ function setCut3D(kind){ if(!lastModel) return; const {R,L}=lastModel, s=$('#u-p
   V3.cut=kind; document.querySelectorAll('#pg-ngam3d [data-cut]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.cut===kind)));
   s.disabled=kind==='none';
   if(kind==='doc'){ s.min=N(R.x0-0.1); s.max=N(R.x1+0.1); s.value=cl(V3.cutX ?? L.graves[0].xc,R.x0-0.1,R.x1+0.1); }
-  if(kind==='ngang'){ s.min=N(R.y0-0.1); s.max=N(R.y1+0.1); s.value=cl(V3.cutY ?? (L.yGF+L.yGB)/2,R.y0-0.1,R.y1+0.1); }
+  if(kind==='ngang'){ s.min=N(R.y0-0.1); s.max=N(R.y1+0.1); s.value=cl(V3.cutY ?? L.hc,R.y0-0.1,R.y1+0.1); }
   updCut3D(); applyToggles3D(); if(kind==='doc') setViewU('side'); else if(kind==='ngang') setViewU('front'); }
 function updCut3D(){ if(!lastModel) return; const v=+$('#u-pos').value, k=V3.cut;
   if(k==='doc') V3.cutX=v; if(k==='ngang') V3.cutY=v;
@@ -3616,7 +3660,7 @@ const GY_DATA=[
  ['diff','Gạch trần, không trát, không sơn, miết mạch kẻ chỉ','10:30–11:00, 25:02',
   '<q>Em khuyên anh là để mà trông nó đẹp nhé, xây gạch không trát.</q> Không sơn; các mạch giữa viên gạch phải miết mạch kẻ chỉ, nhìn ấm hơn.',
   'Mặt trong tường hậu để gạch trần. Tường bao và lưng tường hậu trát xi măng, màu xám (anh đã chọn sau buổi trao đổi).',
-  'Ở các phần để gạch trần (mặt trong tường hậu, khung viền, bậc) nên dặn thợ miết mạch kẻ chỉ.'],
+  'Ở các phần để gạch trần (mặt trong tường hậu, bậc) nên dặn thợ miết mạch kẻ chỉ.'],
  ['diff','Đá xanh Thanh Hóa hoặc đá rêu bền mãi; granite sau này sẽ nứt','14:19–15:19',
   '<q>Khẳng định với anh sau nó nứt</q>; đá xanh Thanh Hóa thì bền mãi, càng ngày càng đen. Đá màu rêu đắt hơn nhưng đẹp, nặng.',
   'Mộ đang để granite đen (anh cho rằng granite đen Ấn Độ không nứt); cột trái có ô "Chất liệu mộ" để chuyển sang đá xanh vân mây mài mờ. Bàn hương án và các kiểu lư dùng đá xanh.',
@@ -3701,7 +3745,7 @@ function gopyHTML(){
   GY_DATA.forEach(g=>g[2].forEach(it=>{ if(C[it[0]]!=null) C[it[0]]++; }));
   let h=`<div class="anh-head"><div><h2>Góp ý của cậu Khải</h2><p>Trang tham khảo, tổng hợp từ bản ghi âm trao đổi (khoảng 42 phút) và 14 ảnh checklist “Quy trình chuẩn bị – cải táng – nhập quách – hạ huyệt” trong thư mục <code>tham-khao/gop-y</code>. Mỗi ý được đặt cạnh thiết kế hiện tại (ngày 19/11/2026) để tiện so sánh; thiết kế không thay đổi theo trang này.</p></div></div>
   <div class="gy-stats">${[[C.ok,'Đã có trong thiết kế','ok'],[C.diff,'Khác thiết kế','diff'],[C.open,'Chưa có trong thiết kế','open']].map(([n,l,k])=>`<div class="gy-stat"><b class="gy-c-${k}">${n}</b><span>${l}</span></div>`).join('')}</div>
-  <nav class="anh-nav" aria-label="Mục góp ý">${GY_DATA.map(g=>`<a href="#${g[1]}">${g[0]}</a>`).join('')}<a href="#gy-nghile">I. Cải táng, hạ huyệt</a><a href="#gy-chiphi">J. Chi phí</a><a href="#gy-vidu">K. Tham khảo</a><a href="#gy-cl">L. Công tác chuẩn bị</a></nav>
+  <nav class="anh-nav" aria-label="Mục góp ý">${GY_DATA.map(g=>`<a href="#${g[1]}">${g[0]}</a>`).join('')}<a href="#gy-nghile">I. Cải táng, hạ huyệt</a><a href="#gy-chiphi">J. Chi phí</a><a href="#gy-vidu">K. Tham khảo</a></nav>
   <div class="gy-filters" role="group" aria-label="Lọc theo trạng thái">
    <button type="button" data-f="all" aria-pressed="true">Tất cả</button><button type="button" data-f="ok" aria-pressed="false">Đã có trong thiết kế</button>
    <button type="button" data-f="diff" aria-pressed="false">Khác thiết kế</button><button type="button" data-f="open" aria-pressed="false">Chưa có</button>
@@ -3726,10 +3770,20 @@ function gopyHTML(){
   <p>Nhìn từ trên xuống, các đường đứt tạo thành bốn quẻ Khôn ôm lấy mộ. Ngày xưa làm ba nấc, lên đến mộ còn một nấc; nay không có điều kiện thì làm ba nấc ở dưới thành một. Vuông bên ngoài, tròn bên trong (như bánh chưng, bánh dày) là biểu tượng phong thủy của người Việt. Đầu búp sen làm bằng đá đỏ, gặp mưa thì đỏ lên trên nền đá xanh đen. Khu mộ nhà mình theo tam tài thiên – địa – nhân, nên mở đường đi hai bên, đi vòng quanh được.</p></article>
   <article class="gy-item" data-s="ref"><div class="gy-hd"><span class="gy-badge gy-b-ref">Tham khảo</span><h3>Một khu lăng có hồ bán nguyệt và hàng thông</h3></div>
   <p>Khu lăng xây trên đất đồng (khoảng 1 triệu/m²), phía trước đào hồ bán nguyệt thả cá, xung quanh trồng thông; lá thông rụng làm cỏ không mọc. Ví dụ cho thấy phải tính toàn bộ hệ thống nước ngay từ đầu.</p></article>
-  <h3 class="gy-h" id="gy-cl">L. Công tác chuẩn bị</h3>
-  <article class="gy-item gy-cl" data-s="proc">
+  <h3 class="gy-h gy-tail">Ghi chú về nguồn</h3>
+  <ul class="gy-note gy-tail">
+   <li>Thứ tự các lớp lót trong bản ghi âm và trong checklist không hoàn toàn giống nhau. Bản ghi âm nói “cát vàng → bát úp → than, sỏi cuội → cát vàng”, còn checklist ghi “than củi → sỏi cuội → cát vàng → bát úp”. Sơ đồ ở mục G theo checklist vì đó là bản viết.</li>
+   <li>Ở đầu bản ghi âm có nói “than đá”, sau đó cậu sửa thành “than củi, đập dập ra”; checklist cũng ghi than củi.</li>
+   <li>Trong bản ghi âm, “Em” là cậu Khải, “Anh” là anh.</li>
+  </ul>`;
+  return h;
+}
+/* tab Công tác chuẩn bị: quy trình, vật tư, đồ lễ cải táng – nhập quách – hạ huyệt (tách từ trang Góp ý) */
+function chuanbiHTML(){
+  return `<div class="anh-head"><div><h2>Công tác chuẩn bị</h2><p>Quy trình chuẩn bị, cải táng, nhập quách, hạ huyệt và danh mục vật tư, đồ lễ cần sắm.</p></div></div>
+  <article class="gy-item gy-cl">
    <div class="gy-cl-head"><h4 class="gy-cl-title">QUY TRÌNH CHUẨN BỊ – CẢI TÁNG – NHẬP QUÁCH – HẠ HUYỆT (1 VỊ)</h4>
-   <p>Soạn lại từ checklist cậu Khải gửi. Bản gốc dùng cho cải táng 2 vị; ở đây đã bỏ thông tin gia chủ và chỉnh lại cho 1 vị là anh Tùng. Số lượng ở cột “Anh Tùng” là ước tính, lấy khoảng một nửa số lượng bản gốc 2 vị, nên hỏi lại cậu Khải trước khi mua. Giờ giấc từng bước xem mục I ở trên. Cột “Phụ trách” để trống, gia đình tự phân công.</p></div>
+   <p>Soạn lại từ checklist cậu Khải gửi. Bản gốc dùng cho cải táng 2 vị; ở đây đã bỏ thông tin gia chủ và chỉnh lại cho 1 vị là anh Tùng. Số lượng ở cột “Anh Tùng” là ước tính, lấy khoảng một nửa số lượng bản gốc 2 vị, nên hỏi lại cậu Khải trước khi mua. Giờ giấc từng bước xem mục I ở tab Góp ý. Cột “Phụ trách” để trống, gia đình tự phân công.</p></div>
 
    <section class="gy-cl-wide gy-cl-first">
    <h4>1. VẬT TƯ VÀ ĐỒ LỄ CẦN CHUẨN BỊ</h4>
@@ -3851,15 +3905,9 @@ function gopyHTML(){
    <h5>LƯU Ý QUAN TRỌNG</h5>
    <p>Kiểm đếm đầy đủ vật liệu, đồ lễ và dụng cụ trước khi khai mộ. Cỗ tiểu chuẩn bị tại mộ cũ; cỗ quách cùng vật liệu nhập quách và hạ huyệt chuẩn bị tại mộ mới.</p>
    </section>
-  </article>
-  <h3 class="gy-h gy-tail">Ghi chú về nguồn</h3>
-  <ul class="gy-note gy-tail">
-   <li>Thứ tự các lớp lót trong bản ghi âm và trong checklist không hoàn toàn giống nhau. Bản ghi âm nói “cát vàng → bát úp → than, sỏi cuội → cát vàng”, còn checklist ghi “than củi → sỏi cuội → cát vàng → bát úp”. Sơ đồ ở mục G theo checklist vì đó là bản viết.</li>
-   <li>Ở đầu bản ghi âm có nói “than đá”, sau đó cậu sửa thành “than củi, đập dập ra”; checklist cũng ghi than củi.</li>
-   <li>Trong bản ghi âm, “Em” là cậu Khải, “Anh” là anh.</li>
-  </ul>`;
-  return h;
+  </article>`;
 }
+function renderChuanbi(){ const host=$('#s-chuanbi'); if(!host.innerHTML) host.innerHTML=chuanbiHTML(); }
 function renderGopy(){
   const host=$('#s-gopy'); if(host.innerHTML) return;
   host.innerHTML=gopyHTML();
@@ -3942,7 +3990,7 @@ function svRead(){ try{ const a=JSON.parse(localStorage.getItem(SV_KEY)||'[]'); 
 function svWrite(a){ try{ localStorage.setItem(SV_KEY,JSON.stringify(a)); return true; }catch(e){ return false; } }
 function svMsg(s,ok=true){ const m=$('#sv-msg'); m.textContent=s; m.style.color=ok?'':'#b4462c'; clearTimeout(svMsg.t); svMsg.t=setTimeout(()=>{ m.textContent=''; },6000); }
 const svDate=ts=>{ const d=new Date(ts), z=n=>String(n).padStart(2,'0'); return `${z(d.getDate())}/${z(d.getMonth()+1)}/${d.getFullYear()} ${z(d.getHours())}:${z(d.getMinutes())}`; };
-function svApply(obj){ const p=merge(clone(DEFAULTS),obj||{}); if(!obj || !obj._v || obj._v<15) p.lu=clone(DEFAULTS.lu); if(!obj || !obj._v || obj._v<16) p.lu.type = obj && obj.lu && obj.lu.on==='no' ? 'no' : 'mai'; if(!obj || !obj._v || obj._v<17){ if(p.lu.type==='mai') p.lu.type='an'; } p._v=DEFAULTS._v; p.bia.photo='no'; P=p; saveP(); buildForm(); render(); }
+function svApply(obj){ const p=merge(clone(DEFAULTS),obj||{}); if(!obj || !obj._v || obj._v<15) p.lu=clone(DEFAULTS.lu); if(!obj || !obj._v || obj._v<16) p.lu.type = obj && obj.lu && obj.lu.on==='no' ? 'no' : 'mai'; if(!obj || !obj._v || obj._v<17){ if(p.lu.type==='mai') p.lu.type='an'; } if(!obj || !obj._v || obj._v<18) p.frame.up=0; p._v=DEFAULTS._v; p.bia.photo='no'; P=p; saveP(); buildForm(); render(); }
 function svList(){ const a=svRead(), ul=$('#sv-list');
   ul.innerHTML = a.length ? a.map((s,i)=>`<li><span class="nm">${esc(s.name)}<span class="dt">${svDate(s.ts)}</span></span><button class="btn sm" type="button" data-sv-load="${i}">Mở</button><button class="btn sm" type="button" data-sv-del="${i}" aria-label="Xóa ${esc(s.name)}">Xóa</button></li>`).join('')
     : '<li><span class="nm dt">Chưa lưu phương án nào. Số liệu đang sửa vẫn được tự nhớ trên máy này.</span></li>'; }
@@ -4054,9 +4102,10 @@ function labelSheetBars(){ document.querySelectorAll('.sheet-bar').forEach(bar=>
 document.getElementById('tabs').addEventListener('click',e=>{ const b=e.target.closest('.tab'); if(!b||b.disabled) return;
   document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',String(t===b)));
   document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='pg-'+b.dataset.t));
-  $('#toolbar').style.display = (b.dataset.t==='info'||b.dataset.t==='tiendo'||b.dataset.t==='3d'||b.dataset.t==='ngam3d'||b.dataset.t==='anh'||b.dataset.t==='gopy') ? 'none' : '';
+  $('#toolbar').style.display = (b.dataset.t==='info'||b.dataset.t==='tiendo'||b.dataset.t==='3d'||b.dataset.t==='ngam3d'||b.dataset.t==='anh'||b.dataset.t==='gopy'||b.dataset.t==='chuanbi') ? 'none' : '';
   if(b.dataset.t==='anh' && !$('#s-anh').innerHTML) renderGallery();
   if(b.dataset.t==='gopy') renderGopy();
+  if(b.dataset.t==='chuanbi') renderChuanbi();
 
   if(b.dataset.t==='3d' || b.dataset.t==='ngam3d') show3D(b.dataset.t==='ngam3d'?'under':'above');
   try{ localStorage.setItem(LS_KEY+'-tab',b.dataset.t); }catch(e){} });
